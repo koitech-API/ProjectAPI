@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    background-color: blue;
+    gap: 1rem;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    grid-column: 1/ 5;
+
+    /*faz o header ficar fixo em em cima*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+section {
+    margin-top: 5rem;
+    background-color: white;
+    padding: 10px;
+    grid-column: 2/ 4;
+}
+
+aside {
+    background-color: white;
+    padding: 10px;
+    grid-column: 2/ 3;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    grid-column: 3/ 4;
+}
+
+footer {
+    background-color: white;
+    padding: 10px;
+    grid-column: 1/ 5;
+
+    /*faz o footer ficar fixo em baixo*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
