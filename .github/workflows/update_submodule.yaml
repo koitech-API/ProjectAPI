@@ -22,5 +22,6 @@ jobs:
         run: |
           git submodule update --remote
           git add docs
+          git pull
           git commit -m "chore: atualização do submodulo `docs`"
           git push https://koitech-API:${{ secrets.PAT_DISPATCH }}@github.com/koitech-API/ProjectAPI.git
