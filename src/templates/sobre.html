@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/normalize.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="./logo.png" style="width: 5rem;">
-        <h1>KOITECH</h1>
+      <img
+        src="{{ url_for('static', filename='assets/logo.png') }}"
+        style="width: 4rem"
+      />
+      <h1>KOITECH</h1>
 
-        <nav>
-            <a href="{{ url_for('index') }}">HOME</a>
-            <a href="{{ url_for('sobre') }}">SOBRE</a>
-            <a href="">GRÁFICOS</a>
-        </nav>
+      <nav>
+        <a href="{{ url_for('index') }}">HOME</a>
+        <a href="{{ url_for('sobre') }}">SOBRE</a>
+        <a href="">GRÁFICOS</a>
+      </nav>
     </header>
 
-    <section class ="sobre-section">
-        <h1>Este site foi desenvolvido pela equipe KOITECH para ser uma 
-            ferramenta de estudo sobre o Censo IBGE de 2022 na cidade de São José dos Campos.</h1>
+    <section class="sobre-section">
+      <h1>
+        Este site foi desenvolvido pela equipe KOITECH para ser uma ferramenta
+        de estudo sobre o Censo IBGE de 2022 na cidade de São José dos Campos.
+      </h1>
     </section>
-
-</body>
-
+  </body>
 </html>
