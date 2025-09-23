@@ -1,51 +1,176 @@
-body {
+main {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr;
-    background-color: blue;
     gap: 1rem;
+    padding-top: 90px;
+    grid-column: 1 / 5;
 }
 
 header {
-    background-color: white;
-    padding: 10px;
-    grid-column: 1/ 5;
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFEFC;
+    border-bottom: 2px solid #821D18;
 
     /*faz o header ficar fixo em em cima*/
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: white;
+    z-index: 1;
 }
 
-section {
-    margin-top: 5rem;
-    background-color: white;
+/* logo + nome (koitech) */
+figure {
+    display: flex;
+    margin: 0;
+}
+/* fim logo + nome*/
+
+/* botões header */
+nav {
+    margin: 1rem;
+}
+
+nav a {
+    padding: 6px 15px;
+    border: 2px solid #821D18;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: lightgray;
+    transition: 0.5s;
+}
+/* fim botões header*/
+
+/* imagem da cidade e título */
+.banner {
+    grid-column: 1 / 5;
+    height: 80vh;
+    background: url("../images/sjc.jpg") no-repeat center center/cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 12px;
+    height: 60vh;
+    width: 70vw;
+    font-size: 30pt;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+/* fim imagem da cidade e título*/
+
+/* conteúdo principal (gráficos + filtros) */
+.tituloGrafico {
+    background-color: BLUE;
     padding: 10px;
     grid-column: 2/ 4;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }
 
-aside {
-    background-color: white;
+.filtros {
+    background-color: red;
     padding: 10px;
     grid-column: 2/ 3;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }
 
-main {
-    background-color: white;
+.graficos {
+    background-color: green;
     padding: 10px;
     grid-column: 3/ 4;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }
+/* fim conteúdo principal*/
 
+/* célula da página sobre */
+.sobre {
+    grid-column: 2 / 4;
+    height: 40vh;
+    background-color: #1A377C;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 3rem;
+    padding: 3rem;
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+}
+/* fim célula sobre*/
+
+/* rodapé */
 footer {
-    background-color: white;
+    background-color: #f7f7f7;
     padding: 10px;
     grid-column: 1/ 5;
+    text-align: center;
+    border-top: 2px solid #821D18;
+    font-weight: bold;
+}
+/* fim rodapé*/
 
-    /*faz o footer ficar fixo em baixo*/
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
+/* media queries */
+@media screen and (max-width: 600px) {
+
+    /* hamburguer menu */
+    nav {
+        display: none;
+    }
+
+    .overlay h2 {
+        font-size: 15pt;
+    }
+
+    .tituloGrafico {
+        background-color: BLUE;
+        padding: 10px;
+        grid-column: 2/ 4;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .filtros {
+        background-color: red;
+        padding: 10px;
+        grid-column: 2/ 4;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .graficos {
+        background-color: green;
+        padding: 10px;
+        grid-column: 2/ 4;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .sobre {
+        font-size: 15pt;
+    }
 }

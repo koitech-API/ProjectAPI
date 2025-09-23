@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Sobre</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -26,28 +26,16 @@
         </header>
         <!-- fim header -->
 
-        <!-- banner -->
-        <section class="banner">
-            <div class="overlay">
-                <h2>Análise do Censo na Cidade de <br>São José dos Campos</h2>
-            </div>
-        </section>
-        <!-- fim banner -->
-
-        <!-- conteúdo principal (gráficos e filtros) -->
-        <summary class="tituloGrafico">
-            PIRÂMIDE ETÁRIA 2022
-        </summary>
-        <aside class="filtros">
-            FILTROS
-        </aside>
-        <article class="graficos">
-            GRÁFICOS
+        <!-- célula sobre -->
+        <article class="sobre">
+            <p>Este site foi desenvolvido pela equipe Koitech como ferramenta de análise
+                dos Censos do IBGE na cidade de São José dos Campos.</p>
         </article>
-        <!-- fim conteúdo principal -->
+        <!-- fim célula sobre -->
 
         <!-- rodapé -->
-        <footer>
+        <!-- style inline para suprir a falta de conteúdo da página  -->
+        <footer style="width: 100%; position: absolute; bottom: 0; right: 0;">
             koitech - 2025
         </footer>
         <!-- fim rodapé -->
