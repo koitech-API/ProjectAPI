@@ -42,8 +42,8 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 | RANK | PRIORIDADE | USER STORY                                                                                                           | Story Points | SPRINT | STATUS |
 | :--: | :--------: | -------------------------------------------------------------------------------------------------------------------- | :----------: | :----: | :----: |
 | 01   |    Alta    | Como secretário, quero visualizar um protótipo do site para compreender a navegação planejada.                       |   4 horas    |   01   |   🟩   |
-| 02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                          |   6 horas    |   01   |   🟥   |
-| 03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                  |   6 horas    |   01   |   🟨   |
+| 02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                          |   6 horas    |   01   |   🟨   |
+| 03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                  |   6 horas    |   01   |   🟩   |
 | 04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.  |   5 horas    |   01   |   ❌   |
 | 05   |    Alta    | Como secretário quero poder comparar outros anos para identificar o crecimentos dos indicadores.                     |   7 horas    |   02   |   ❌   |
 | 06   |    Alta    | Como cliente, quero que ajustes sejam feitos conforme feedback anterior para melhorar a usabilidade.                 |   4 horas    |   02   |   ❌   |
