@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/normalize.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <main>
-        <!-- header -->
-        <header>
-            <figure>
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" width="90px">
-                <h1>KOITECH</h1>
-            </figure>
-            <nav>
-                <a href="/">HOME</a>
-                <a href="/sobre">SOBRE</a>
-                <a href="#">GRÁFICOS</a>
-            </nav>
-        </header>
-        <!-- fim header -->
+      <!-- header -->
+      <header>
+        <figure>
+          <img
+            src="{{ url_for('static', filename='assets/logo.png') }}"
+            alt="logo"
+            width="90px"
+          />
+          <h1>KOITECH</h1>
+        </figure>
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/sobre">SOBRE</a>
+          <a href="#">GRÁFICOS</a>
+        </nav>
+      </header>
+      <!-- fim header -->
 
-        <!-- banner -->
-        <section class="banner">
-            <div class="overlay">
-                <h2>Análise do Censo na Cidade de <br>São José dos Campos</h2>
-            </div>
-        </section>
-        <!-- fim banner -->
+      <!-- banner -->
+      <section class="banner">
+        <div class="overlay">
+          <h2>Análise do Censo na Cidade de <br />São José dos Campos</h2>
+        </div>
+      </section>
+      <!-- fim banner -->
 
-        <!-- conteúdo principal (gráficos e filtros) -->
-        <summary class="tituloGrafico">
-            PIRÂMIDE ETÁRIA 2022
-        </summary>
-        <aside class="filtros">
-            FILTROS
-        </aside>
-        <article class="graficos">
-            GRÁFICOS
-        </article>
-        <!-- fim conteúdo principal -->
+      <!-- conteúdo principal (gráficos e filtros) -->
+      <summary class="tituloGrafico">PIRÂMIDE ETÁRIA 2022</summary>
+      <aside class="filtros">FILTROS</aside>
+      <article class="graficos">GRÁFICOS</article>
+      <!-- fim conteúdo principal -->
 
-        <!-- rodapé -->
-        <footer>
-            koitech - 2025
-        </footer>
-        <!-- fim rodapé -->
+      <!-- rodapé -->
+      <footer>koitech - 2025</footer>
+      <!-- fim rodapé -->
     </main>
-</body>
-
+  </body>
 </html>

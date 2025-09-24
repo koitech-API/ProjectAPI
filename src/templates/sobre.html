@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/normalize.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <main>
-        <!-- header -->
-        <header>
-            <figure>
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" width="90px">
-                <h1>KOITECH</h1>
-            </figure>
-            <nav>
-                <a href="/">HOME</a>
-                <a href="/sobre">SOBRE</a>
-                <a href="#">GRÁFICOS</a>
-            </nav>
-        </header>
-        <!-- fim header -->
+      <!-- header -->
+      <header>
+        <figure>
+          <img
+            src="{{ url_for('static', filename='assets/logo.png') }}"
+            alt="logo"
+          />
+          <h1>KOITECH</h1>
+        </figure>
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/sobre">SOBRE</a>
+          <a href="#">GRÁFICOS</a>
+        </nav>
+      </header>
+      <!-- fim header -->
 
-        <!-- célula sobre -->
-        <article class="sobre">
-            <p>Este site foi desenvolvido pela equipe Koitech como ferramenta de análise
-                dos Censos do IBGE na cidade de São José dos Campos.</p>
-        </article>
-        <!-- fim célula sobre -->
+      <!-- célula sobre -->
+      <article class="sobre">
+        <p>
+          Este site foi desenvolvido pela equipe Koitech como ferramenta de
+          análise dos Censos do IBGE na cidade de São José dos Campos.
+        </p>
+      </article>
+      <!-- fim célula sobre -->
 
-        <!-- rodapé -->
-        <!-- style inline para suprir a falta de conteúdo da página  -->
-        <footer style="width: 100%; position: absolute; bottom: 0; right: 0;">
-            koitech - 2025
-        </footer>
-        <!-- fim rodapé -->
+      <!-- rodapé -->
+      <!-- style inline para suprir a falta de conteúdo da página  -->
+      <footer style="width: 100%; position: absolute; bottom: 0; right: 0">
+        koitech - 2025
+      </footer>
+      <!-- fim rodapé -->
     </main>
-</body>
-
+  </body>
 </html>
