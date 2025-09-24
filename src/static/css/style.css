@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr;
@@ -19,21 +23,25 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    padding: 0 1rem;
     z-index: 1;
 }
 
 /* logo + nome (koitech) */
 figure {
     display: flex;
+    align-items:center;
+    gap: 10px;
     margin: 0;
+}
+
+figure img{
+    width: 50px;
+    height: 50px;
 }
 /* fim logo + nome*/
 
 /* botões header */
-nav {
-    margin: 1rem;
-}
-
 nav a {
     padding: 6px 15px;
     border: 2px solid #821D18;
@@ -53,7 +61,7 @@ nav a:hover {
 .banner {
     grid-column: 1 / 5;
     height: 80vh;
-    background: url("../images/sjc.jpg") no-repeat center center/cover;
+    background: url("../assets/sjc.jpg") no-repeat center center/cover;
     display: grid;
     justify-content: center;
     align-items: center;
