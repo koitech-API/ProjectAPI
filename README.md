@@ -23,10 +23,17 @@
 ## 💻 Tecnologias <a id="tecnologias"></a>
 
 <h4 align="center">
- <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"></a>
- <a href="https://www.atlassian.com/software/jira"><img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white"/></a>
- <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+ <a href="#"><img src="https://img.shields.io/badge/HTML-f06529?logo=html5&style=for-the-badge&google&colab&logoColor=white"></a>
+ <a href="#"><img src="https://img.shields.io/badge/Css-298fca?style=for-the-badge&logo=css&logoColor=White"></a>
  <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
+ <br>
+ <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=fff"></a>
+ <a href="https://flask.palletsprojects.com/en/stable/"><img src="https://img.shields.io/badge/Flask-7bc86c?style=for-the-badge&logo=Flask&logoColor=white"></a>
+ <a href="https://colab.google/"><img src="https://img.shields.io/badge/google_colab-F9AB00?style=for-the-badge&logo=google-colab&logoColor=white"></a>
+ <br>
+ <a href="https://git-scm.com/downloads"><img src="https://img.shields.io/badge/Git-191919?style=for-the-badge&logo=git&logoColor=white"></a>
+ <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+ <a href="https://www.atlassian.com/software/jira"><img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white"/></a>
 </h4>
 
 <br>
@@ -38,13 +45,15 @@ A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma quan
 A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmos uma análise detalhada dos dados do Censo, focando na cidade de São José dos Campos.
 
 ## 📝 PRODUCT BACKLOG <a id="backlog"></a>
-
+🟩 - Concluído
+🟨 - Em andamento
+❌ - Não iniciado
 | RANK | PRIORIDADE | USER STORY                                                                                                           | Story Points | SPRINT | STATUS |
 | :--: | :--------: | -------------------------------------------------------------------------------------------------------------------- | :----------: | :----: | :----: |
 | 01   |    Alta    | Como secretário, quero visualizar um protótipo do site para compreender a navegação planejada.                       |   4 horas    |   01   |   🟩   |
 | 02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                          |   6 horas    |   01   |   🟨   |
 | 03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                  |   6 horas    |   01   |   🟩   |
-| 04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.  |   5 horas    |   01   |   ❌   |
+| 04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.  |   5 horas    |   01   |   🟨    |
 | 05   |    Alta    | Como secretário quero poder comparar outros anos para identificar o crecimentos dos indicadores.                     |   7 horas    |   02   |   ❌   |
 | 06   |    Alta    | Como cliente, quero que ajustes sejam feitos conforme feedback anterior para melhorar a usabilidade.                 |   4 horas    |   02   |   ❌   |
 | 07   |   Média    | Como secretário, quero visualizar a população total por ano para uma visão geral.                                    |   5 horas    |   02   |   ❌   |
@@ -87,7 +96,17 @@ Github Flow foi a estrátegia escolhida por ser fácil e rápida de trabalhar, p
 (ainda será feito)
 
 ## 💻 Como executar
-(ainda a ser feito)
+### Requisitos
+ - Git (<a href="https://git-scm.com/downloads">download</a>)
+ - Python 3.9+ (<a href="https://www.python.org/">download</a>)
+ - Flask + requisitos?
+
+### Execução
+ 1. Clonar o repositório principal (main)
+  ```bash
+   git clone https://github.com/koitech-API/ProjectAPI.git
+   cd ProjectAPI
+  ```
 
 ## EQUIPE
 | MEMBRO              | PAPEL         | GITHUB                                                                                                                                                        | LINKEDIN                                    |
