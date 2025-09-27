@@ -1,5 +1,6 @@
-*{
-    box-sizing: border-box;
+body {
+    font-family: arial;
+    font-weight: bold;
 }
 
 main {
@@ -20,10 +21,8 @@ header {
 
     /*faz o header ficar fixo em em cima*/
     position: fixed;
-    left: 0;
     top: 0;
     width: 100%;
-    padding: 0 1rem;
     z-index: 1;
 }
 
@@ -32,7 +31,7 @@ figure {
     display: flex;
     align-items:center;
     gap: 10px;
-    margin: 0;
+    margin: 1rem;
 }
 
 figure img{
@@ -42,6 +41,10 @@ figure img{
 /* fim logo + nome*/
 
 /* botões header */
+nav {
+    margin: 1rem;
+}
+
 nav a {
     padding: 6px 15px;
     border: 2px solid #821D18;
@@ -69,11 +72,10 @@ nav a:hover {
 
 .overlay {
     background: rgba(0, 0, 0, 0.4);
-    padding: 1rem;
     border-radius: 12px;
     height: 60vh;
     width: 70vw;
-    font-size: 30pt;
+    font-size: 50pt;
     color: white;
     text-align: center;
     align-content: center;
@@ -86,7 +88,6 @@ nav a:hover {
     padding: 10px;
     grid-column: 2/ 4;
     text-align: center;
-    font-weight: bold;
     color: white;
     border-radius: 5px;
 }
@@ -95,7 +96,6 @@ nav a:hover {
     background-color: red;
     padding: 10px;
     grid-column: 2/ 3;
-    font-weight: bold;
     color: white;
     border-radius: 5px;
 }
@@ -104,7 +104,6 @@ nav a:hover {
     background-color: green;
     padding: 10px;
     grid-column: 3/ 4;
-    font-weight: bold;
     color: white;
     border-radius: 5px;
 }
@@ -122,7 +121,7 @@ nav a:hover {
     margin-top: 3rem;
     padding: 3rem;
     color: white;
-    font-size: 20pt;
+    font-size: 30pt;
     text-align: center;
 }
 /* fim célula sobre*/
@@ -134,12 +133,11 @@ footer {
     grid-column: 1/ 5;
     text-align: center;
     border-top: 2px solid #821D18;
-    font-weight: bold;
 }
 /* fim rodapé*/
 
 /* media queries */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     /* hamburguer menu */
     nav {
@@ -147,7 +145,7 @@ footer {
     }
 
     .overlay h2 {
-        font-size: 15pt;
+        font-size: 30pt;
     }
 
     .tituloGrafico {
@@ -176,6 +174,16 @@ footer {
         font-weight: bold;
         color: white;
         border-radius: 5px;
+    }
+
+    .sobre {
+        font-size: 20pt;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .overlay h2 {
+        font-size: 20pt;
     }
 
     .sobre {
