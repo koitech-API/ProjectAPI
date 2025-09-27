@@ -12,6 +12,7 @@
   | <a href ="#tecnologias">Tecnologias</a> |
   <a href ="#problema"> Problema</a>  |
   <a href ="#solucao"> Solução</a>  |   
+  <a href ="#demonstracao"> Demonstração</a>  |
   <a href ="#backlog"> Backlog do Produto</a>  |
   <a href ="#dor">DoR</a>  |
   <a href ="#dod">DoD</a>  |
@@ -44,6 +45,10 @@ A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma quan
 ## 📌 Solução <a id="solucao"></a>
 A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmos uma análise detalhada dos dados do Censo, focando na cidade de São José dos Campos.
 
+## 📌 Demonstração (vídeos)<a id="demonstracao"></a>
+  - <a href="https://www.youtube.com/watch?v=8izK_qOPVEU">Google Colab</a> 
+  - <a href="https://www.youtube.com/watch?v=_1wC6rgtIvA">Site</a> 
+
 ## 📝 PRODUCT BACKLOG <a id="backlog"></a>
 🟩 - Concluído
 🟨 - Em andamento
@@ -63,8 +68,8 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 |  11   |   Baixa    | Como secretário, quero visualizar indicadores de nível de instrução (se possível) para atender a carência educacional |   5 horas    |   03   |   ❌    |
 |  12   |   Baixa    | Como secretário, quero uma interface clara e agradável para facilitar a interpretação dos gráficos.                   |   6 horas    |   03   |   ❌    |
 
-## ⏱️ Cronograma de Evolução
-(ainda será feito)
+## ⏱️ Burndown Sprint 1 (Sprint atual)
+<img alt="koitech_logo" src="./scrum/sprints/sprint 1/burndownSprint01.png" />
 
 ## 📅 Cronograma de Sprints
 
@@ -160,6 +165,10 @@ ProjectAPI
   ```bash
    flask run
   ```
+
+ ### Link para o Google Colab do projeto
+  - <a href="https://colab.research.google.com/drive/1JZoWERUV-D4EV75mkCWp3amXNISYmcut">Google Colab</a>
+
 
 ## EQUIPE
 |       MEMBRO        |     PAPEL     |                                                                        GITHUB                                                                        |                                                         LINKEDIN                                                          |
