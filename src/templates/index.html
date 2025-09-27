@@ -44,9 +44,15 @@
       <!-- fim banner -->
 
       <!-- conteúdo principal (gráficos e filtros) -->
-      <summary class="tituloGrafico">PIRÂMIDE ETÁRIA 2022</summary>
+      <summary class="tituloGrafico">PIRÂMIDE ETÁRIA</summary>
+
+      <!-- para aplicação futura -->
       <aside class="filtros">FILTROS</aside>
-      <article class="graficos">GRÁFICOS</article>
+      
+      <article class="graficos">
+        <img src="{{ url_for('static', filename='assets/2010etario.png') }}">
+        <img src="{{ url_for('static', filename='assets/2022etario.png') }}">
+      </article>
       <!-- fim conteúdo principal -->
 
       <!-- rodapé -->
