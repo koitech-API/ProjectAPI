@@ -1,3 +1,8 @@
+body {
+    font-family: Arial;
+    font-weight: bold;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr;
