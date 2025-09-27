@@ -69,11 +69,10 @@ nav a:hover {
 
 .overlay {
     background: rgba(0, 0, 0, 0.4);
-    padding: 1rem;
     border-radius: 12px;
     height: 60vh;
     width: 70vw;
-    font-size: 30pt;
+    font-size: 50pt;
     color: white;
     text-align: center;
     align-content: center;
@@ -87,7 +86,6 @@ nav a:hover {
     padding: 10px;
     grid-column: 2/ 4;
     text-align: center;
-    font-weight: bold;
     color: white;
     border-radius: 5px;
 }
@@ -98,7 +96,6 @@ nav a:hover {
     background-color: red;
     padding: 10px;
     grid-column: 2/ 3;
-    font-weight: bold;
     color: white;
     border-radius: 5px;
 }
@@ -132,7 +129,7 @@ nav a:hover {
     margin-top: 3rem;
     padding: 3rem;
     color: white;
-    font-size: 20pt;
+    font-size: 30pt;
     text-align: center;
 }
 
@@ -145,13 +142,12 @@ footer {
     grid-column: 1/ 5;
     text-align: center;
     border-top: 2px solid #821D18;
-    font-weight: bold;
 }
 
 /* fim rodapé*/
 
 /* media queries */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     /* hamburguer menu */
     nav {
@@ -159,7 +155,7 @@ footer {
     }
 
     .overlay h2 {
-        font-size: 15pt;
+        font-size: 30pt;
     }
 
     .tituloGrafico {
@@ -197,6 +193,16 @@ footer {
         max-width: 100%;
         margin: 0.5rem;
         border-radius: 5px;
+    }
+
+    .sobre {
+        font-size: 20pt;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .overlay h2 {
+        font-size: 20pt;
     }
 
     .sobre {
