@@ -20,6 +20,7 @@ jobs:
 
       - name: Atualizar submodulo
         run: |
+          git pull
           git submodule update --remote
           git add docs
           git commit -m "chore: atualização do submodulo `docs`"
