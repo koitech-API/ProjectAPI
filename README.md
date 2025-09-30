@@ -69,9 +69,9 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 |  12   |   Baixa    | Como secretário, quero uma interface clara e agradável para facilitar a interpretação dos gráficos.                   |   6 horas    |   03   |   ❌    |
 
 ## ⏱️ Burndown Sprint 1 (Sprint atual)
-<img alt="koitech_logo" src="./scrum/sprints/sprint 1/burndownSprint01.png" />
+<img alt="koitech_logo" src="https://raw.githubusercontent.com/koitech-API/Documentos/main/scrum/sprints/sprint%201/burndownSprint01.png" />
 
-## 📅 Cronograma de Sprints
+## 📅 Cronograma de Sprints <a id="sprint"></a>
 
 | Sprint         |    Período    | Documentação                                          |
 | -------------- | :-----------: | ----------------------------------------------------- |
@@ -79,13 +79,13 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 | 🔖 **SPRINT 2** | 06/10 - 26/10 | [Sprint 2 Docs](/scrum/sprints/sprint%202/README.md)  |
 | 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](/scrum/sprints/sprint%203/README.mds) |
 
-## ✔️ DoR - Definition of Ready
+## ✔️ DoR - Definition of Ready <a id="dor"></a>
   - Backlog priorizado de acordo com valor de negócio
   - Item descritivo e claro
   - Meta definida e possivel
   - Critérios de valor definidos
 
-## 🎯 DoD - Definition of Done
+## 🎯 DoD - Definition of Done <a id="dod"></a>
   - Backlog refinado e priorizado no repositório
   - Backlog está disponível, atualizado e visível para todos
 
@@ -121,7 +121,7 @@ ProjectAPI
 └── README.md
  ```
 
-## 💻 Como executar
+## 💻 Como executar <a id="manual"></a>
 ### Requisitos
  - Git (<a href="https://git-scm.com/downloads">download</a>)
  - Python 3.9+ (<a href="https://www.python.org/">download</a>)
