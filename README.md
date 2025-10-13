@@ -12,7 +12,6 @@
   | <a href ="#tecnologias">Tecnologias</a> |
   <a href ="#problema"> Problema</a>  |
   <a href ="#solucao"> Solução</a>  |   
-  <a href ="#demonstracao"> Demonstração</a>  |
   <a href ="#backlog"> Backlog do Produto</a>  |
   <a href ="#dor">DoR</a>  |
   <a href ="#dod">DoD</a>  |
@@ -45,10 +44,6 @@ A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma quan
 ## 📌 Solução <a id="solucao"></a>
 A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmos uma análise detalhada dos dados do Censo, focando na cidade de São José dos Campos.
 
-## 📌 Demonstração (vídeos)<a id="demonstracao"></a>
-  - <a href="https://www.youtube.com/watch?v=8izK_qOPVEU">Google Colab</a> 
-  - <a href="https://www.youtube.com/watch?v=_1wC6rgtIvA">Site</a> 
-
 ## 📝 PRODUCT BACKLOG <a id="backlog"></a>
 🟩 - Concluído
 🟨 - Em andamento
@@ -59,19 +54,17 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 |  02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                           |   6 horas    |   01   |   🟩    |
 |  03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                   |   6 horas    |   01   |   🟩    |
 |  04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.   |   5 horas    |   01   |   🟩    |
-|  05   |    Alta    | Como secretário quero poder comparar outros anos para identificar o crecimentos dos indicadores.                      |   7 horas    |   02   |   ❌    |
-|  06   |    Alta    | Como cliente, quero que ajustes sejam feitos conforme feedback anterior para melhorar a usabilidade.                  |   4 horas    |   02   |   ❌    |
-|  07   |   Média    | Como secretário, quero visualizar a população total por ano para uma visão geral.                                     |   5 horas    |   02   |   ❌    |
-|  08   |   Média    | Como analista, quero analisar a renda média para compreender aspectos socioeconômicos.                                |   6 horas    |   02   |   ❌    |
-|  09   |    Alta    | Como analista, quero aplicar filtros (faixa etária, renda, sexo) para personalizar a análise.                         |   8 horas    |   03   |   ❌    |
-|  10   |   Média    | Como secretário, quero o site online sem necessidade de instalação para acessá-lo de qualquer plataforma.             |   7 horas    |   03   |   ❌    |
-|  11   |   Baixa    | Como secretário, quero visualizar indicadores de nível de instrução (se possível) para atender a carência educacional |   5 horas    |   03   |   ❌    |
-|  12   |   Baixa    | Como secretário, quero uma interface clara e agradável para facilitar a interpretação dos gráficos.                   |   6 horas    |   03   |   ❌    |
+|  05   |    Alta    | Como pesquisador, quero calcular a proporção de jovens (15–29 anos) sobre o total da população, para compreender o peso demográfico da juventude em cada cidade. |   8 horas    |   02   |   ❌    |
+|  06   |    Média   | Como analista visual, quero gerar pirâmides etárias para SJC e SP, para mostrar visualmente as diferenças na estrutura de idade entre as cidades. |   6 horas    |   02   |   ❌    |
+|  07   |    Alta    | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades |   8 horas    |   02   |   ❌    |
+|  08   |    Média   | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos. |   6 horas    |   02   |   ❌    |
+|  09   |    Alta    | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local. |   4 horas    |   02   |   ❌    |
+|  10   |    Alta    | Como analista, quero aplicar filtros (faixa etária, renda, sexo) para personalizar a análise.                         |   8 horas    |   03   |   ❌    |
+|  11   |   Média    | Como secretário, quero o site online sem necessidade de instalação para acessá-lo de qualquer plataforma.             |   7 horas    |   03   |   ❌    |
+|  12   |   Baixa    | Como secretário, quero visualizar indicadores de nível de instrução (se possível) para atender a carência educacional |   5 horas    |   03   |   ❌    |
+|  13   |   Baixa    | Como secretário, quero uma interface clara e agradável para facilitar a interpretação dos gráficos.                   |   6 horas    |   03   |   ❌    |
 
-## ⏱️ Burndown Sprint 1 (Sprint atual)
-<img alt="koitech_logo" src="https://raw.githubusercontent.com/koitech-API/Documentos/main/scrum/sprints/sprint%201/burndownSprint01.png" />
-
-## 📅 Cronograma de Sprints <a id="sprint"></a>
+## 📅 Cronograma de Sprints
 
 | Sprint         |    Período    | Documentação                                          |
 | -------------- | :-----------: | ----------------------------------------------------- |
@@ -79,13 +72,13 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 | 🔖 **SPRINT 2** | 06/10 - 26/10 | [Sprint 2 Docs](/scrum/sprints/sprint%202/README.md)  |
 | 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](/scrum/sprints/sprint%203/README.mds) |
 
-## ✔️ DoR - Definition of Ready <a id="dor"></a>
+## ✔️ DoR - Definition of Ready
   - Backlog priorizado de acordo com valor de negócio
   - Item descritivo e claro
   - Meta definida e possivel
   - Critérios de valor definidos
 
-## 🎯 DoD - Definition of Done <a id="dod"></a>
+## 🎯 DoD - Definition of Done
   - Backlog refinado e priorizado no repositório
   - Backlog está disponível, atualizado e visível para todos
 
@@ -121,7 +114,7 @@ ProjectAPI
 └── README.md
  ```
 
-## 💻 Como executar <a id="manual"></a>
+## 💻 Como executar
 ### Requisitos
  - Git (<a href="https://git-scm.com/downloads">download</a>)
  - Python 3.9+ (<a href="https://www.python.org/">download</a>)
@@ -165,10 +158,6 @@ ProjectAPI
   ```bash
    flask run
   ```
-
- ### Link para o Google Colab do projeto
-  - <a href="https://colab.research.google.com/drive/1JZoWERUV-D4EV75mkCWp3amXNISYmcut">Google Colab</a>
-
 
 ## EQUIPE
 |       MEMBRO        |     PAPEL     |                                                                        GITHUB                                                                        |                                                         LINKEDIN                                                          |
