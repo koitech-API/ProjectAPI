@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/reset.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
 
-  <body>
-    <main>
-      <!-- header -->
-      <header>
-        <figure>
-          <img
-            src="{{ url_for('static', filename='assets/logo.png') }}"
-            alt="logo"
-            width="90px"
-          />
-          <h1>KOITECH</h1>
-        </figure>
-        <nav>
-          <a href="/">HOME</a>
-          <a href="/sobre">SOBRE</a>
-          <a href="#">GRÁFICOS</a>
-        </nav>
-      </header>
-      <!-- fim header -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 
-      <!-- banner -->
-      <section class="banner">
-        <div class="overlay">
-          <h2>Análise do Censo na Cidade de <br />São José dos Campos</h2>
-        </div>
-      </section>
-      <!-- fim banner -->
+</head>
 
-      <!-- conteúdo principal (gráficos e filtros) -->
-      <summary class="tituloGrafico">PIRÂMIDE ETÁRIA</summary>
+<body>
+  <main>
+    <!-- header -->
+    <header>
+      <figure>
+        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo" width="90px" />
+        <h1>KOITECH</h1>
+      </figure>
+      <nav>
+        <a href="/">HOME</a>
+        <a href="/sobre">SOBRE</a>
+        <a href="#">GRÁFICOS</a>
+      </nav>
+    </header>
+    <!-- fim header -->
 
-      <!-- para aplicação futura -->
-      <aside class="filtros">FILTROS</aside>
-      
-      <article class="graficos">
-        <img src="{{ url_for('static', filename='assets/2010etario.png') }}">
-        <img src="{{ url_for('static', filename='assets/2022etario.png') }}">
-      </article>
-      <!-- fim conteúdo principal -->
+    <!-- banner -->
+    <section class="banner">
+      <div class="overlay">
+        <h2>Análise do Censo na Cidade de <br />São José dos Campos</h2>
+      </div>
+    </section>
+    <!-- fim banner -->
 
-      <!-- rodapé -->
-      <footer>koitech - 2025</footer>
-      <!-- fim rodapé -->
-    </main>
-  </body>
+    <!-- conteúdo principal (gráficos e filtros) -->
+    <summary class="tituloGrafico">OCUPAÇÃO DA POPULAÇÃO JOVEM 2010</summary>
+    <article class="graficos">
+      <!-- gráfico 01 -->
+      <div id="razao_jovens_ocupacao_2010"></div>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script>
+        var grafico = {{ razao_jovens_ocupacao_2010_json | tojson | safe }};
+        Plotly.newPlot('razao_jovens_ocupacao_2010', grafico.data, grafico.layout);
+      </script>
+      <!-- fim gráfico 01 -->
+    </article>
+
+    <summary class="tituloGrafico">DISTRIBUIÇÃO DE FAIXAS SALARIAIS 2010</summary>
+    <article class="graficos">
+      <!-- gráfico 02 -->
+      <div id="distribuicao_renda_2010"></div>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script>
+        var grafico2 = {{ distribuicao_renda_2010_json | tojson | safe }};
+        Plotly.newPlot('distribuicao_renda_2010', grafico2.data, grafico2.layout);
+      </script>
+      <!-- fim gráfico 02 -->
+    </article>
+    <!-- fim conteúdo principal -->
+
+    <!-- rodapé -->
+    <footer>koitech - 2025</footer>
+    <!-- fim rodapé -->
+  </main>
+</body>
+
 </html>
