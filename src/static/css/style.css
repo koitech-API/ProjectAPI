@@ -95,29 +95,18 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* para aplicação futura */
-.filtros {
-    display: none;
-    background-color: red;
-    padding: 10px;
-    grid-column: 2/ 3;
-    color: white;
-    border-radius: 5px;
-}
-
-/* fim - para aplicação futura */
-
 .graficos {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #d8d8d8;
     grid-column: 2/ 4;
     border-radius: 5px;
 }
 
-.graficos img {
-    max-width: 48%;
-    margin: 1%;
-    border-radius: 5px;
+.graficos div {
+    width: 100%;
 }
 
 /* fim conteúdo principal*/
