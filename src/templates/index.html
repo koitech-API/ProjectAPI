@@ -59,6 +59,18 @@
       </script>
       <!-- fim gráfico 02 -->
     </article>
+
+    <summary class="tituloGrafico">ESCOLARIDADE MEDIO X SUPERIOR 2010</summary>
+    <article class="graficos">
+      <!-- gráfico 03 -->
+      <div id="escolaridade_medio_superior_2010"></div>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script>
+        var grafico = {{ escolaridade_medio_superior_2010_json | tojson | safe }};
+        Plotly.newPlot('razao_jovens_ocupacao_2010', grafico.data, grafico.layout);
+      </script>
+      <!-- fim gráfico 03 -->
+    </article>
     <!-- fim conteúdo principal -->
 
     <!-- rodapé -->
