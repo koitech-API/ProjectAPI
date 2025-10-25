@@ -54,11 +54,11 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 |  02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                           |   6 horas    |   01   |   🟩    |
 |  03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                   |   6 horas    |   01   |   🟩    |
 |  04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.   |   5 horas    |   01   |   🟩    |
-|  05   |    Alta    | Como pesquisador, quero calcular a proporção de jovens (15–29 anos) sobre o total da população, para compreender o peso demográfico da juventude em cada cidade. |   8 horas    |   02   |   ❌    |
-|  06   |    Média   | Como analista visual, quero gerar pirâmides etárias para SJC e SP, para mostrar visualmente as diferenças na estrutura de idade entre as cidades. |   6 horas    |   02   |   ❌    |
-|  07   |    Alta    | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades |   8 horas    |   02   |   ❌    |
-|  08   |    Média   | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos. |   6 horas    |   02   |   ❌    |
-|  09   |    Alta    | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local. |   4 horas    |   02   |   ❌    |
+|  05   |    Alta    | Como pesquisador, quero calcular a proporção de jovens (15–29 anos) sobre o total da população, para compreender o peso demográfico da juventude em cada cidade. |   8 horas    |   02   |   🟩    |
+|  06   |    Média   | Como analista visual, quero gerar pirâmides etárias para SJC e SP, para mostrar visualmente as diferenças na estrutura de idade entre as cidades. |   6 horas    |   02   |   🟩    |
+|  07   |    Alta    | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades |   8 horas    |   02   |   🟩    |
+|  08   |    Média   | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos. |   6 horas    |   02   |   🟩    |
+|  09   |    Alta    | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local. |   4 horas    |   02   |   🟩    |
 |  10   |    Alta    | Como analista, quero aplicar filtros (faixa etária, renda, sexo) para personalizar a análise.                         |   8 horas    |   03   |   ❌    |
 |  11   |   Média    | Como secretário, quero o site online sem necessidade de instalação para acessá-lo de qualquer plataforma.             |   7 horas    |   03   |   ❌    |
 |  12   |   Baixa    | Como secretário, quero visualizar indicadores de nível de instrução (se possível) para atender a carência educacional |   5 horas    |   03   |   ❌    |
@@ -90,23 +90,68 @@ Github Flow foi a estrátegia escolhida por ser fácil e rápida de trabalhar, p
 - Pull Requests para features concluidas
 - Merge as branchs caso tudo esteja de acordo
 
-## 🦴 Estrutura do Projeto
+## 🦴 Estrutura do Projeto (Repositório "Documentos")
+```bash
+Documentos
+├── .github
+│   └── workflows
+│       ├── notify.yaml
+│       └── sync_readme.yaml
+├── dados
+│   └── populacao_jovem
+│       ├── _populacao_jovem_2010_2022.ipynb
+│       ├── ocupadas_etário_2010.xlsx
+│       ├── ocupadas_etário_2022.xlsx
+│       ├── ocupadas_salarial_2010.xlsx
+│       ├── ocupadas_salarial_2022.xlsx
+│       ├── populacao_nivel_instrucao_2010.xlsx
+│       ├── populacao_nivel_instrucao_2022.xlsx
+│       ├── populacao_residente_idade_2010.xlsx
+│       ├── populacao_residente_idade_2022.xlsx
+│       ├── populacao_residente_total_2010.csv
+│       ├── populacao_residente_total_2022.xlsx
+│       ├── populacao_residente_total_SP_2010.xlsx
+│       ├── populacao_superior_completo_2010.xlsx
+│       └── populacao_superior_completo_2022.xlsx
+├── scrum
+│   └── sprints
+│       ├── sprint 1
+│       │   └── README.md
+│       ├── sprint 2
+│       │   └── README.md
+│       └── sprint 3
+│           └── README.md
+└── README.md
+ ```
+
+ ## 🦴 Estrutura do Projeto (Repositório "ProjectAPI")
 ```bash
 ProjectAPI
 ├── .github
 │   └── workflows
 │       └── update_submodule.yaml
+├── docs
 ├── src
 │   ├── static
-│       ├── assets
-│           ├── logo.png
-│           └── sjc.png
-│       └── css
-│           ├── reset.css
-│           └── style.css
+│   │   ├── assets
+│   │   │   ├── plots
+│   │   │   │   ├── grafico_distribuicao_salarial_sjc_sp_2010_2022.json
+│   │   │   │   ├── grafico_escolaridade_sjc_sp_2010.json
+│   │   │   │   ├── grafico_escolaridade_sjc_sp_2022.json
+│   │   │   │   ├── grafico_piramide_etaria_sjc_sp_2010_2022.json
+│   │   │   │   ├── grafico_populacao_jovem_residente_sjc_sp_2010_2022.json
+│   │   │   │   ├── grafico_proporcao_formacao_ti_2010_2022.json
+│   │   │   │   ├── grafico_razao_jovens_ocupados_sjc_sp_2010_2022.json
+│   │   │   │   ├── grafico_razao_jovens_residentes_sjc_sp_2010_2022.json
+│   │   │   │   └── grafico_superior_ti_2010_2022.json
+│   │   │   ├── logo.png
+│   │   │   └── sjc.jpg
+│   │   └── css
+│   │       ├── reset.css
+│   │       └── style.css
 │   ├── templates
-│       ├── index.html
-│       └── sobrehtml
+│   │   ├── index.html
+│   │   └── sobre.html
 │   ├── app.py
 │   └── requirements.txt
 ├── .gitignore
@@ -119,7 +164,7 @@ ProjectAPI
  - Git (<a href="https://git-scm.com/downloads">download</a>)
  - Python 3.9+ (<a href="https://www.python.org/">download</a>)
 
-### Execução
+### Execução (site)
  1. Clonar o repositório principal (main)
   ```bash
    git clone https://github.com/koitech-API/ProjectAPI.git
@@ -159,13 +204,23 @@ ProjectAPI
    flask run
   ```
 
-## EQUIPE
-|       MEMBRO        |     PAPEL     |                                                                        GITHUB                                                                        |                                                         LINKEDIN                                                          |
-| :-----------------: | :-----------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
-| Guilherme Alvarenga | Product Owner |   <a href="https://github.com/hiGuigo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>    | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|   Giovana Tarozo    | Scrum Master |   <a href="https://github.com/giotrzz"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>    | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Lucas Pereira    |  Desenvolvedor |    <a href="http://github.com/lupesii"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>    | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|     João Souza      | Desenvolvedor | <a href="https://github.com/joao-luis-0"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>  | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Mariana Souza    | Desenvolvedor | <a href="https://github.com/nevesmariana"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Rayssa Rizzi     | Desenvolvedor | <a href="https://github.com/rayssarizzi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>  | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|   Robert Marques    | Desenvolvedor |  <a href="https://github.com/Robert-gus"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>  | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+### Execução (Google Colab)
+ 1. Clonar o repositório "Documentos"
+  ```bash
+   git clone https://github.com/koitech-API/Documentos.git
+  ```
+ 2. Fazer o upload da pasta "populacao_jovem" (Documentos/dados/populacao_jovem) em um Google Drive de sua escolha
+ 3. Seguir o passo-a-passo no início do arquivo "_populacao_jovem_2010_2022.ipynb"
+
+## 👥 EQUIPE <a id="equipe"></a>
+
+|       MEMBRO        |     PAPEL     |                                                                            GITHUB                                                                             |                                                         LINKEDIN                                                          |
+| :-----------------: | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
+| Guilherme Alvarenga | Product Owner | <a href="https://github.com/guilhermealvarenga021"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|    Giovana Tarozo   | Scrum Master  |        <a href="https://github.com/giotrzz"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>         | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|     João Souza      | Desenvolvedor |      <a href="https://github.com/joao-luis-0"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|   Lucas Pereira    | Desenvolvedor |        <a href="http://github.com/lupesii"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>        | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|    Mariana Souza    | Desenvolvedor |     <a href="https://github.com/nevesmariana"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|    Rayssa Rizzi     | Desenvolvedor |      <a href="https://github.com/rayssarizzi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|   Robert Marques    | Desenvolvedor |      <a href="https://github.com/Robert-gus"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+
