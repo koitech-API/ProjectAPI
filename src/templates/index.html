@@ -130,9 +130,40 @@
       </div>
     </article>
 
+    <summary class="tituloGrafico">PIRÂMIDE ETÁRIA (SJC x SP) 2010 - 2022</summary>
+    <!-- gráfico 05 -->
+    <article class="graficos">
+      <div id="grafico_piramide_etaria_sjc_sp_2010_2022"></div>
+      <script>
+        var grafico = {{ grafico_piramide_etaria_sjc_sp_2010_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_piramide_etaria_sjc_sp_2010_2022', grafico.data, grafico.layout);
+      </script>
+    </article>
+    <!-- fim gráfico 05 -->
+
+    <article class="interpretacaoGraficos">
+      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Perfil etário dos jovens em São José dos Campos</h1>
+      <div>
+        <h2>Gráfico: PIRÂMIDE ETÁRIA SJC x SP - 2010 x 2022</h2>
+        <p>- A base da pirâmide (0 a 14 anos) de São José dos Campos, bem como na capital, teve uma redução
+          proporcional, indicando uma possível queda na natalidade;</p>
+        <p>- As faixas de 14 a 30 anos ainda representam um número expressivo de pessoas, indicando uma população jovem
+          ativa, mas que está envelhecendo.</p>
+      </div>
+      <div>
+        <h2>Com a queda da natalidade e envelhecimento da população jovem, a médio/longo prazo a força de trabalho jovem
+          estará possivelmente fragilizada. Algumas possíveis soluções:</h2>
+        <p>- Incentivo de programas de natalidade e apoio a famílias jovens (creches, habitação, benefícios sociais,
+          etc.) podem ajduar a equilibrar a base populacional;</p>
+        <p>- Investir em programas de retenção de talentos para evitar a migração de jovens qualificados para outras
+          cidades;</p>
+        <p>- Incentivar startups, aproveitando o perfil tecnológico de SJC.</p>
+      </div>
+    </article>
+
     <summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.1: "ENSINO MÉDIO COMPLETO x SUPERIOR COMPLETO" (SJC x SP) 2010
       - 2022</summary>
-    <!-- gráfico 05 -->
+    <!-- gráfico 06 -->
     <article class="graficos">
       <div id="grafico_escolaridade_sjc_sp_2010"></div>
       <script>
@@ -140,9 +171,9 @@
         Plotly.newPlot('grafico_escolaridade_sjc_sp_2010', grafico.data, grafico.layout);
       </script>
     </article>
-    <!-- fim gráfico 05 -->
+    <!-- fim gráfico 06 -->
 
-    <!-- gráfico 06 -->
+    <!-- gráfico 07 -->
     <article class="graficos">
       <div id="grafico_escolaridade_sjc_sp_2022"></div>
       <script>
@@ -150,7 +181,7 @@
         Plotly.newPlot('grafico_escolaridade_sjc_sp_2022', grafico.data, grafico.layout);
       </script>
     </article>
-    <!-- fim gráfico 06 -->
+    <!-- fim gráfico 07 -->
 
     <article class="interpretacaoGraficos">
       <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Escolaridade dos jovens (Ensino Médio e Superior)</h1>
@@ -177,7 +208,7 @@
 
     <summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.2: "ENSINO SUPERIOR COMPLETO x GRADUAÇÃO EM TI" (SJC x SP)
       2010 - 2022</summary>
-    <!-- gráfico 07 -->
+    <!-- gráfico 08 -->
     <article class="graficos">
       <div id="grafico_superior_ti_2010_2022"></div>
       <script>
@@ -185,9 +216,9 @@
         Plotly.newPlot('grafico_superior_ti_2010_2022', grafico.data, grafico.layout);
       </script>
     </article>
-    <!-- fim gráfico 07 -->
+    <!-- fim gráfico 08 -->
 
-    <!-- gráfico 08 -->
+    <!-- gráfico 9 -->
     <article class="graficos">
       <div id="grafico_proporcao_formacao_ti_2010_2022"></div>
       <script>
@@ -195,7 +226,7 @@
         Plotly.newPlot('grafico_proporcao_formacao_ti_2010_2022', grafico.data, grafico.layout);
       </script>
     </article>
-    <!-- fim gráfico 08 -->
+    <!-- fim gráfico 9 -->
 
     <article class="interpretacaoGraficos">
       <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Formação em TI</h1>
@@ -212,7 +243,8 @@
           contornar isso:</h2>
         <p>- Reforçar incentivo técnico e superior em TI, visto que SJC é um polo tecnológico;</p>
         <p>- Incentivar programas de bolsas e carreira na área de tecnologia para reverter a proporção de formandos;</p>
-        <p>- Parcerias com o PIT e empresas com base tecnológica para estimular o estudo com a prática no mercado de trabalho.</p>
+        <p>- Parcerias com o PIT e empresas com base tecnológica para estimular o estudo com a prática no mercado de
+          trabalho.</p>
       </div>
     </article>
 
