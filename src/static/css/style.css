@@ -100,13 +100,43 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #d8d8d8;
     grid-column: 2/ 4;
     border-radius: 5px;
 }
 
 .graficos div {
     width: 100%;
+}
+
+.interpretacaoGraficos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f0f0f0da;
+    grid-column: 2/ 4;
+    border-radius: 5px;
+
+}
+
+.interpretacaoGraficos h1 {
+    font-size: 20pt;
+}
+
+.interpretacaoGraficos h2 {
+     font-size: 18pt;
+     margin-bottom: 1rem;
+}
+
+.interpretacaoGraficos h3 {
+     font-size: 16pt;
+}
+
+.interpretacaoGraficos p {
+    margin-left: 1rem;
+}
+
+.interpretacaoGraficos div {
+    margin-bottom: 1rem;
 }
 
 /* fim conteúdo principal*/

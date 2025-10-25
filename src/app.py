@@ -7,19 +7,45 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     #caminho até os arquivos dos gráficos
-    razao_jovens_ocupacao_2010 = os.path.join("static", "assets", "plots", "razao_jovens_ocupacao_2010.json")
-    distribuicao_renda_2010 = os.path.join("static", "assets", "plots", "distribuicao_renda_2010.json")
-
+    grafico_razao_jovens_ocupados_sjc_sp_2010_2022 = os.path.join("static", "assets", "plots", "grafico_razao_jovens_ocupados_sjc_sp_2010_2022.json")
+    grafico_distribuicao_salarial_sjc_sp_2010_2022 = os.path.join("static", "assets", "plots", "grafico_distribuicao_salarial_sjc_sp_2010_2022.json")
+    grafico_populacao_jovem_residente_sjc_sp_2010_2022 = os.path.join("static", "assets", "plots", "grafico_populacao_jovem_residente_sjc_sp_2010_2022.json")
+    grafico_razao_jovens_residentes_sjc_sp_2010_2022 = os.path.join("static", "assets", "plots", "grafico_razao_jovens_residentes_sjc_sp_2010_2022.json")
+    grafico_escolaridade_sjc_sp_2010 = os.path.join("static", "assets", "plots", "grafico_escolaridade_sjc_sp_2010.json")
+    grafico_escolaridade_sjc_sp_2022 = os.path.join("static", "assets", "plots", "grafico_escolaridade_sjc_sp_2022.json")
+    grafico_superior_ti_2010_2022 = os.path.join("static", "assets", "plots", "grafico_superior_ti_2010_2022.json")
+    grafico_proporcao_formacao_ti_2010_2022 = os.path.join("static", "assets", "plots", "grafico_proporcao_formacao_ti_2010_2022.json")
+    
+    
     #abre e carrega os arquivos dos gráficos
-    with open(razao_jovens_ocupacao_2010, "r", encoding="utf-8") as f:
-        razao_jovens_ocupacao_2010_json = json.load(f)
-    with open(distribuicao_renda_2010, "r", encoding="utf-8") as o:
-        distribuicao_renda_2010_json = json.load(o)
+    with open(grafico_razao_jovens_ocupados_sjc_sp_2010_2022, "r", encoding="utf-8") as a:
+        grafico_razao_jovens_ocupados_sjc_sp_2010_2022 = json.load(a)
+    with open(grafico_distribuicao_salarial_sjc_sp_2010_2022, "r", encoding="utf-8") as b:
+        grafico_distribuicao_salarial_sjc_sp_2010_2022 = json.load(b)
+    with open(grafico_populacao_jovem_residente_sjc_sp_2010_2022, "r", encoding="utf-8") as c:
+        grafico_populacao_jovem_residente_sjc_sp_2010_2022 = json.load(c)
+    with open(grafico_razao_jovens_residentes_sjc_sp_2010_2022, "r", encoding="utf-8") as d:
+        grafico_razao_jovens_residentes_sjc_sp_2010_2022 = json.load(d)
+    with open(grafico_escolaridade_sjc_sp_2010, "r", encoding="utf-8") as e:
+        grafico_escolaridade_sjc_sp_2010 = json.load(e)
+    with open(grafico_escolaridade_sjc_sp_2022, "r", encoding="utf-8") as f:
+        grafico_escolaridade_sjc_sp_2022 = json.load(f)
+    with open(grafico_superior_ti_2010_2022, "r", encoding="utf-8") as g:
+        grafico_superior_ti_2010_2022 = json.load(g)
+    with open(grafico_proporcao_formacao_ti_2010_2022, "r", encoding="utf-8") as h:
+        grafico_proporcao_formacao_ti_2010_2022 = json.load(h)
+    
 
     return render_template(
         "index.html",
-        razao_jovens_ocupacao_2010_json=razao_jovens_ocupacao_2010_json,
-        distribuicao_renda_2010_json=distribuicao_renda_2010_json
+        grafico_razao_jovens_ocupados_sjc_sp_2010_2022 = grafico_razao_jovens_ocupados_sjc_sp_2010_2022,
+        grafico_distribuicao_salarial_sjc_sp_2010_2022 = grafico_distribuicao_salarial_sjc_sp_2010_2022,
+        grafico_populacao_jovem_residente_sjc_sp_2010_2022 = grafico_populacao_jovem_residente_sjc_sp_2010_2022,
+        grafico_razao_jovens_residentes_sjc_sp_2010_2022 = grafico_razao_jovens_residentes_sjc_sp_2010_2022,
+        grafico_escolaridade_sjc_sp_2010 = grafico_escolaridade_sjc_sp_2010,
+        grafico_escolaridade_sjc_sp_2022 = grafico_escolaridade_sjc_sp_2022,
+        grafico_superior_ti_2010_2022 = grafico_superior_ti_2010_2022,
+        grafico_proporcao_formacao_ti_2010_2022 = grafico_proporcao_formacao_ti_2010_2022
     )
 
 @app.route("/sobre")
