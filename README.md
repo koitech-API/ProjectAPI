@@ -12,6 +12,7 @@
   | <a href ="#tecnologias">Tecnologias</a> |
   <a href ="#problema"> Problema</a>  |
   <a href ="#solucao"> Solução</a>  |   
+  <a href ="#roadmap"> Roadmap</a>  |
   <a href ="#backlog"> Backlog do Produto</a>  |
   <a href ="#dor">DoR</a>  |
   <a href ="#dod">DoD</a>  |
@@ -43,6 +44,11 @@ A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma quan
 
 ## 📌 Solução <a id="solucao"></a>
 A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmos uma análise detalhada dos dados do Censo, focando na cidade de São José dos Campos.
+
+## 🗺️ Roadmap <a id="roadmap"></a>
+|    📍 **Entrega 1**    |     📍 **Entrega 2**    |          📍 **Entrega 3**          |
+| :--------------------: | :---------------------: | :--------------------------------: |
+| 🧱 **Base do projeto** | 📝 **Expanção de indicadores** | ⚡ **Interatividade e refinamento** |
 
 ## 📝 PRODUCT BACKLOG <a id="backlog"></a>
 🟩 - Concluído
