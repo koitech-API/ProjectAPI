@@ -54,21 +54,23 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 🟩 - Concluído
 🟨 - Em andamento
 ❌ - Não iniciado
-| RANK  | PRIORIDADE | USER STORY                                                                                                            | Story Points | SPRINT | STATUS |
-| :---: | :--------: | --------------------------------------------------------------------------------------------------------------------- | :----------: | :----: | :----: |
-|  01   |    Alta    | Como secretário, quero visualizar um protótipo do site para compreender a navegação planejada.                        |   4 horas    |   01   |   🟩    |
-|  02   |    Alta    | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                           |   6 horas    |   01   |   🟩    |
-|  03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                   |   6 horas    |   01   |   🟩    |
-|  04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.   |   5 horas    |   01   |   🟩    |
-|  05   |    Alta    | Como pesquisador, quero calcular a proporção de jovens (15–29 anos) sobre o total da população, para compreender o peso demográfico da juventude em cada cidade. |   8 horas    |   02   |   🟩    |
-|  06   |    Média   | Como analista visual, quero gerar pirâmides etárias para SJC e SP, para mostrar visualmente as diferenças na estrutura de idade entre as cidades. |   6 horas    |   02   |   🟩    |
-|  07   |    Alta    | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades |   8 horas    |   02   |   🟩    |
-|  08   |    Média   | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos. |   6 horas    |   02   |   🟩    |
-|  09   |    Alta    | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local. |   4 horas    |   02   |   🟩    |
-|  10   |    Alta    | Como analista, quero aplicar filtros (faixa etária, renda, sexo) para personalizar a análise.                         |   8 horas    |   03   |   ❌    |
-|  11   |   Média    | Como secretário, quero o site online sem necessidade de instalação para acessá-lo de qualquer plataforma.             |   7 horas    |   03   |   ❌    |
-|  12   |   Baixa    | Como secretário, quero visualizar indicadores de nível de instrução (se possível) para atender a carência educacional |   5 horas    |   03   |   ❌    |
-|  13   |   Baixa    | Como secretário, quero uma interface clara e agradável para facilitar a interpretação dos gráficos.                   |   6 horas    |   03   |   ❌    |
+| RANK  | PRIORIDADE | USER STORY                                                                                                                                                                                                                                                | Story Points | SPRINT | STATUS |
+| :---: | :--------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: | :----: | :----: |
+|  01   |   Alta     | Como secretário, quero visualizar um protótipo do site para compreender a navegação planejada.                                                                                                                                                            |   4 horas    |   01   |   🟩   |
+|  02   |   Alta     | Como analista, quero que os dados da pirâmide etária sejam tratados para garantir precisão.                                                                                                                                                               |   6 horas    |   01   |   🟩   |
+|  03   |   Média    | Como secretário, quero acessar uma versão inicial do site para interagir com os primeiros gráficos.                                                                                                                                                       |   6 horas    |   01   |   🟩   |
+|  04   |   Média    | Como analista, quero comparar a pirâmide etária entre anos (2010 x 2022) para identificar diferenças populacionais.                                                                                                                                       |   5 horas    |   01   |   🟩   |
+|  05   |   Alta     | Como pesquisador, quero calcular a proporção de jovens (15–29 anos) sobre o total da população, para compreender o peso demográfico da juventude em cada cidade.                                                                                          |   8 horas    |   02   |   🟩   |
+|  06   |   Média    | Como analista visual, quero gerar pirâmides etárias para SJC e SP, para mostrar visualmente as diferenças na estrutura de idade entre as cidades.                                                                                                         |   6 horas    |   02   |   🟩   |
+|  07   |   Alta     | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades.                                                                                                |   8 horas    |   02   |   🟩   |
+|  08   |   Média    | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos.                                                                                                    |   6 horas    |   02   |   🟩   |
+|  09   |   Alta     | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local.                                                                        |   4 horas    |   02   |   🟩   |
+|  10   |   Média    | Como gestor de políticas de trabalho e renda, quero visualizar a razão de jovens empregados nas cidades próximas a São José dos Campos para identificar disparidades regionais e orientar políticas de emprego.                                           |   5 horas    |   03   |   ❌   |
+|  11   |   Baixa    | Como analista de planejamento econômico, quero poder visualizar a distribuição salarial nas cidades próximas a São José dos Campos para avaliar o poder aquisitivo e planejar ações de incentivo à renda e qualificação profissional.                     |   5 horas    |   03   |   ❌   |
+|  12   |   Média    | Como coordenador de políticas para juventude, quero poder visualizar a proporção da população jovem nas cidades próximas a São José dos Campos para compreender a representatividade dessa faixa etária e planejar políticas voltadas à juventude.        |   5 horas    |   03   |   ❌   |
+|  13   |   Baixa    | Como planejador municipal, quero poder visualizar a pirâmide etária das cidades próximas a São José dos Campos para entender a estrutura etária local e antecipar demandas sociais relacionadas à juventude.                                              |   5 horas    |   03   |   ❌   |
+|  14   |   Alta     | Como gestor de educação, quero poder comparar o nível de instrução da população jovem (médio e superior) nas cidades próximas a São José dos Campos para identificar desigualdades educacionais e direcionar investimentos em formação.                   |   5 horas    |   03   |   ❌   |
+|  15   |   Alta     | Como gestor de inovação e tecnologia, quero comparar a razão entre superior completo e graduação em TI da população jovem nas cidades próximas a São José dos Campos para avaliar o potencial de mão de obra qualificada e alinhar estratégias regionais. |   5 horas    |   03   |   ❌   |
 
 ## 📅 Cronograma de Sprints
 
@@ -76,7 +78,7 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 | -------------- | :-----------: | ----------------------------------------------------- |
 | 🔖 **SPRINT 1** | 08/09 - 28/09 | [Sprint 1 Docs](/scrum/sprints/sprint%201/README.md)  |
 | 🔖 **SPRINT 2** | 06/10 - 26/10 | [Sprint 2 Docs](/scrum/sprints/sprint%202/README.md)  |
-| 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](/scrum/sprints/sprint%203/README.mds) |
+| 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](/scrum/sprints/sprint%203/README.md) |
 
 ## ✔️ DoR - Definition of Ready
   - Backlog priorizado de acordo com valor de negócio
@@ -220,13 +222,13 @@ ProjectAPI
 
 ## 👥 EQUIPE <a id="equipe"></a>
 
-|       MEMBRO        |     PAPEL     |                                                                            GITHUB                                                                             |                                                         LINKEDIN                                                          |
-| :-----------------: | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
-| Guilherme Alvarenga | Product Owner | <a href="https://github.com/guilhermealvarenga021"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Giovana Tarozo   | Scrum Master  |        <a href="https://github.com/giotrzz"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>         | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|     João Souza      | Desenvolvedor |      <a href="https://github.com/joao-luis-0"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|   Lucas Pereira    | Desenvolvedor |        <a href="http://github.com/lupesii"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>        | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Mariana Souza    | Desenvolvedor |     <a href="https://github.com/nevesmariana"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|    Rayssa Rizzi     | Desenvolvedor |      <a href="https://github.com/rayssarizzi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|   Robert Marques    | Desenvolvedor |      <a href="https://github.com/Robert-gus"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|       MEMBRO        |     PAPEL     |                                                                            GITHUB                                                                             | 
+| :-----------------: | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | 
+| Guilherme Alvarenga | Product Owner | <a href="https://github.com/guilhermealvarenga021"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | 
+|    Giovana Tarozo   | Scrum Master  |        <a href="https://github.com/giotrzz"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>        |
+|     João Souza      | Desenvolvedor |      <a href="https://github.com/joao-luis-0"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      |
+|   Lucas Pereira    | Desenvolvedor |        <a href="http://github.com/lupesii"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>          | 
+|    Mariana Souza    | Desenvolvedor |     <a href="https://github.com/nevesmariana"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      |
+|    Rayssa Rizzi     | Desenvolvedor |      <a href="https://github.com/rayssarizzi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>      |
+|   Robert Marques    | Desenvolvedor |      <a href="https://github.com/Robert-gus"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       |
 
