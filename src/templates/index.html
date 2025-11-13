@@ -1,259 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+{% block title %} Home - Koitech {% endblock %}
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+{% block content %}
+<!-- banner -->
+<section class="banner">
+  <div class="overlay">
+    <h2>Análise do Censo na Cidade de <br />São José dos Campos</h2>
+  </div>
+</section>
+<!-- fim banner -->
 
-</head>
+<!-- conteúdo principal (gráficos e filtros) -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<body>
-  <main>
-    <!-- header -->
-    <header>
-      <figure>
-        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo" width="90px" />
-        <h1>KOITECH</h1>
-      </figure>
-      <nav>
-        <a href="/">HOME</a>
-        <a href="/sobre">SOBRE</a>
-      </nav>
-    </header>
-    <!-- fim header -->
+<summary class="tituloGrafico">POPULAÇÃO JOVEM EMPREGADA (SJC x SP) 2010 - 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+  <div id="grafico_razao_jovens_ocupados_sjc_sp_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_razao_jovens_ocupados_sjc_sp_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_razao_jovens_ocupados_sjc_sp_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 01 -->
 
-    <!-- banner -->
-    <section class="banner">
-      <div class="overlay">
-        <h2>Análise do Censo na Cidade de <br />São José dos Campos</h2>
-      </div>
-    </section>
-    <!-- fim banner -->
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Inserção no Mercado de Trabalho</h1>
+  <div>
+    <h2>Gráfico: Razões de Jovens Ocupados nas Amostras (SP Capital x SJC, 2010 e 2022)</h2>
+    <p>- Em 2010, 19% dos jovens em SJC se encontravam ocupados (contra 17,9% em SP);</p>
+    <p>- Em 2022, esse número caiu para 13,3%, juntamente com a diminuição em SP.</p>
+  </div>
+  <div>
+    <h2>A taxa de ocupação jovem teve uma queda expressiva, o que acaba gerando mudanças estruturais no
+      mercado de trabalho e desemprego juvenil. Algumas sugestões:</h2>
+    <p>- Aplicação de programas de primeiro emprego e estágios remunerados;</p>
+    <p>- Parcerias com o PIT e setor privado para empregabilidade juvenil;</p>
+    <p>- Incentivo financeiro para startups voltado ao público jovem.</p>
+  </div>
+</article>
 
-    <!-- conteúdo principal (gráficos e filtros) -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<summary class="tituloGrafico">DISTRIBIÇÃO SALARIAL EM SALÁRIOS MÍNIMOS (SJC x SP) 2010 - 2022</summary>
+<!-- gráfico 02 -->
+<article class="graficos">
+  <div id="grafico_distribuicao_salarial_sjc_sp_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_distribuicao_salarial_sjc_sp_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_distribuicao_salarial_sjc_sp_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 02 -->
 
-    <summary class="tituloGrafico">POPULAÇÃO JOVEM EMPREGADA (SJC x SP) 2010 - 2022</summary>
-    <!-- gráfico 01 -->
-    <article class="graficos">
-      <div id="grafico_razao_jovens_ocupados_sjc_sp_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_razao_jovens_ocupados_sjc_sp_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_razao_jovens_ocupados_sjc_sp_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 01 -->
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Faixa Salarial e Desigualdade</h1>
+  <div>
+    <h2>Gráfico: População Economicamente Ativa por Faixa Salarial — Comparativo SJC x SP (2010 e 2022)</h2>
+    <p>- Em 2010, SJC tinha concentração entre 1 e 5 salários mínimos;</p>
+    <p>- Em 2022, houve um crescimento nas faixas intermediárias, mas poucos ganhos expressivos nas faixas altas;
+    </p>
+    <p>- A faixa “Sem rendimento” e “Até 1 salário mínimo” ainda mantém relevância.</p>
+  </div>
+  <div>
+    <h2> O perfil de renda em SJC sugere uma classe média técnica, com baixo avanço no poder aquisitivo real nos
+      últimos 12 anos. Algumas sugestões:</h2>
+    <p>- Incentivar setores de maior valor agregado (tecnologia, energias renováveis, aeronáutica, etc.);</p>
+    <p>- Incentivar formação técnica de alta qualificação (parcerias com SENAI, ITA etc.);</p>
+    <p>- Incentivo financeiro para o empreendedorismo jovem e inovação digital (incubadoras, coworkings, crédito
+      acessível).</p>
+  </div>
+</article>
 
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Inserção no Mercado de Trabalho</h1>
-      <div>
-        <h2>Gráfico: Razões de Jovens Ocupados nas Amostras (SP Capital x SJC, 2010 e 2022)</h2>
-        <p>- Em 2010, 19% dos jovens em SJC se encontravam ocupados (contra 17,9% em SP);</p>
-        <p>- Em 2022, esse número caiu para 13,3%, juntamente com a diminuição em SP.</p>
-      </div>
-      <div>
-        <h2>A taxa de ocupação jovem teve uma queda expressiva, o que acaba gerando mudanças estruturais no
-          mercado de trabalho e desemprego juvenil. Algumas sugestões:</h2>
-        <p>- Aplicação de programas de primeiro emprego e estágios remunerados;</p>
-        <p>- Parcerias com o PIT e setor privado para empregabilidade juvenil;</p>
-        <p>- Incentivo financeiro para startups voltado ao público jovem.</p>
-      </div>
-    </article>
+<summary class="tituloGrafico">PROPORÇÃO DA POPULAÇÃO JOVEM (SJC x SP) 2010 - 2022</summary>
+<!-- gráfico 03 -->
+<article class="graficos">
+  <div id="grafico_populacao_jovem_residente_sjc_sp_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_populacao_jovem_residente_sjc_sp_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_populacao_jovem_residente_sjc_sp_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 03 -->
 
-    <summary class="tituloGrafico">DISTRIBIÇÃO SALARIAL EM SALÁRIOS MÍNIMOS (SJC x SP) 2010 - 2022</summary>
-    <!-- gráfico 02 -->
-    <article class="graficos">
-      <div id="grafico_distribuicao_salarial_sjc_sp_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_distribuicao_salarial_sjc_sp_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_distribuicao_salarial_sjc_sp_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 02 -->
+<!-- gráfico 04 -->
+<article class="graficos">
+  <div id="grafico_razao_jovens_residentes_sjc_sp_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_razao_jovens_residentes_sjc_sp_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_razao_jovens_residentes_sjc_sp_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 04 -->
 
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Faixa Salarial e Desigualdade</h1>
-      <div>
-        <h2>Gráfico: População Economicamente Ativa por Faixa Salarial — Comparativo SJC x SP (2010 e 2022)</h2>
-        <p>- Em 2010, SJC tinha concentração entre 1 e 5 salários mínimos;</p>
-        <p>- Em 2022, houve um crescimento nas faixas intermediárias, mas poucos ganhos expressivos nas faixas altas;
-        </p>
-        <p>- A faixa “Sem rendimento” e “Até 1 salário mínimo” ainda mantém relevância.</p>
-      </div>
-      <div>
-        <h2> O perfil de renda em SJC sugere uma classe média técnica, com baixo avanço no poder aquisitivo real nos
-          últimos 12 anos. Algumas sugestões:</h2>
-        <p>- Incentivar setores de maior valor agregado (tecnologia, energias renováveis, aeronáutica, etc.);</p>
-        <p>- Incentivar formação técnica de alta qualificação (parcerias com SENAI, ITA etc.);</p>
-        <p>- Incentivo financeiro para o empreendedorismo jovem e inovação digital (incubadoras, coworkings, crédito
-          acessível).</p>
-      </div>
-    </article>
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Evolução da população jovem</h1>
+  <div>
+    <h2>Gráfico: População 15–29 anos vs Total por cidade (2010 e 2022)</h2>
+    <p>- SJC sofreu uma queda de 168 mil para 144 mil nos últimos 12 anos, enquanto a população total cresceu
+      levemente;</p>
+    <p>- SP teve um comportamento semelhante, com a diminuição dos jovens e crescimento populacional geral.</p>
+  </div>
+  <div>
+    <h2>SJC segue com um envelhecimento populacional, sendo necessário:</h2>
+    <p>- Políticas de retenção e atração de jovens talentos;</p>
+    <p>- Incentivo à formação técnica e universitária para "segurar" essa faixa etária.</p>
+  </div>
+</article>
 
-    <summary class="tituloGrafico">PROPORÇÃO DA POPULAÇÃO JOVEM (SJC x SP) 2010 - 2022</summary>
-    <!-- gráfico 03 -->
-    <article class="graficos">
-      <div id="grafico_populacao_jovem_residente_sjc_sp_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_populacao_jovem_residente_sjc_sp_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_populacao_jovem_residente_sjc_sp_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 03 -->
+<summary class="tituloGrafico">PIRÂMIDE ETÁRIA (SJC x SP) 2010 - 2022</summary>
+<!-- gráfico 05 -->
+<article class="graficos">
+  <div id="grafico_piramide_etaria_sjc_sp_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_piramide_etaria_sjc_sp_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_piramide_etaria_sjc_sp_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 05 -->
 
-    <!-- gráfico 04 -->
-    <article class="graficos">
-      <div id="grafico_razao_jovens_residentes_sjc_sp_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_razao_jovens_residentes_sjc_sp_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_razao_jovens_residentes_sjc_sp_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 04 -->
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Perfil etário dos jovens em São José dos Campos</h1>
+  <div>
+    <h2>Gráfico: PIRÂMIDE ETÁRIA SJC x SP - 2010 x 2022</h2>
+    <p>- A base da pirâmide (0 a 14 anos) de São José dos Campos, bem como na capital, teve uma redução
+      proporcional, indicando uma possível queda na natalidade;</p>
+    <p>- As faixas de 14 a 30 anos ainda representam um número expressivo de pessoas, indicando uma população jovem
+      ativa, mas que está envelhecendo.</p>
+  </div>
+  <div>
+    <h2>Com a queda da natalidade e envelhecimento da população jovem, a médio/longo prazo a força de trabalho jovem
+      estará possivelmente fragilizada. Algumas possíveis soluções:</h2>
+    <p>- Incentivo de programas de natalidade e apoio a famílias jovens (creches, habitação, benefícios sociais,
+      etc.) podem ajduar a equilibrar a base populacional;</p>
+    <p>- Investir em programas de retenção de talentos para evitar a migração de jovens qualificados para outras
+      cidades;</p>
+    <p>- Incentivar startups, aproveitando o perfil tecnológico de SJC.</p>
+  </div>
+</article>
 
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Evolução da população jovem</h1>
-      <div>
-        <h2>Gráfico: População 15–29 anos vs Total por cidade (2010 e 2022)</h2>
-        <p>- SJC sofreu uma queda de 168 mil para 144 mil nos últimos 12 anos, enquanto a população total cresceu
-          levemente;</p>
-        <p>- SP teve um comportamento semelhante, com a diminuição dos jovens e crescimento populacional geral.</p>
-      </div>
-      <div>
-        <h2>SJC segue com um envelhecimento populacional, sendo necessário:</h2>
-        <p>- Políticas de retenção e atração de jovens talentos;</p>
-        <p>- Incentivo à formação técnica e universitária para "segurar" essa faixa etária.</p>
-      </div>
-    </article>
+<summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.1: "ENSINO MÉDIO COMPLETO x SUPERIOR COMPLETO" (SJC x SP) 2010
+  - 2022</summary>
+<!-- gráfico 06 -->
+<article class="graficos">
+  <div id="grafico_escolaridade_sjc_sp_2010"></div>
+  <script>
+    var grafico = {{ grafico_escolaridade_sjc_sp_2010 | tojson | safe }};
+    Plotly.newPlot('grafico_escolaridade_sjc_sp_2010', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 06 -->
 
-    <summary class="tituloGrafico">PIRÂMIDE ETÁRIA (SJC x SP) 2010 - 2022</summary>
-    <!-- gráfico 05 -->
-    <article class="graficos">
-      <div id="grafico_piramide_etaria_sjc_sp_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_piramide_etaria_sjc_sp_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_piramide_etaria_sjc_sp_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 05 -->
+<!-- gráfico 07 -->
+<article class="graficos">
+  <div id="grafico_escolaridade_sjc_sp_2022"></div>
+  <script>
+    var grafico = {{ grafico_escolaridade_sjc_sp_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_escolaridade_sjc_sp_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 07 -->
 
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Perfil etário dos jovens em São José dos Campos</h1>
-      <div>
-        <h2>Gráfico: PIRÂMIDE ETÁRIA SJC x SP - 2010 x 2022</h2>
-        <p>- A base da pirâmide (0 a 14 anos) de São José dos Campos, bem como na capital, teve uma redução
-          proporcional, indicando uma possível queda na natalidade;</p>
-        <p>- As faixas de 14 a 30 anos ainda representam um número expressivo de pessoas, indicando uma população jovem
-          ativa, mas que está envelhecendo.</p>
-      </div>
-      <div>
-        <h2>Com a queda da natalidade e envelhecimento da população jovem, a médio/longo prazo a força de trabalho jovem
-          estará possivelmente fragilizada. Algumas possíveis soluções:</h2>
-        <p>- Incentivo de programas de natalidade e apoio a famílias jovens (creches, habitação, benefícios sociais,
-          etc.) podem ajduar a equilibrar a base populacional;</p>
-        <p>- Investir em programas de retenção de talentos para evitar a migração de jovens qualificados para outras
-          cidades;</p>
-        <p>- Incentivar startups, aproveitando o perfil tecnológico de SJC.</p>
-      </div>
-    </article>
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Escolaridade dos jovens (Ensino Médio e Superior)</h1>
+  <div>
+    <h2>Gráfico: Análise de Escolaridade: SJC vs SP (2010 e 2022)</h2>
+    <p>- Houve uma queda na quantidade de indivíduos com Ensino Médio concluído em São José dos Campos;</p>
+    <p>- O número absoluto de jovens com Ensino Superior completo continua expressivamente baixo em relação a São
+      Paulo capital, especialmente nas faixas etárias mais jovens (18–24 anos);</p>
+    <p>- A baixa proporção de jovens de 18–24 anos com ensino superior pode indicar atraso na entrada ou na
+      conclusão do ensino superior;</p>
+    <p>- O grupo de 25 a 29 anos concentra a maior parte dos graduados, sinalizando possível ingresso tardio no
+      ensino superior.</p>
+  </div>
+  <div>
+    <h2>A dimunuição de jovens com ensino concluído em SJC nos útimos 12 anos faz com que a cidade continue muito
+      atrás da grande metrópole. Algumas sugestões:</h2>
+    <p>- Expansão de cursos técnicos e tecnológicos de curta duração;</p>
+    <p>- Programas de apoio à permanência estudantil, especialmente para jovens de 18 a 24 anos, evitando evasão no
+      ensino superior;</p>
+    <p>- Incentivo munícipal às universidades e empresas para programas de estágio e bolsas voltados à prática
+      profissional juvenil.</p>
+  </div>
+</article>
 
-    <summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.1: "ENSINO MÉDIO COMPLETO x SUPERIOR COMPLETO" (SJC x SP) 2010
-      - 2022</summary>
-    <!-- gráfico 06 -->
-    <article class="graficos">
-      <div id="grafico_escolaridade_sjc_sp_2010"></div>
-      <script>
-        var grafico = {{ grafico_escolaridade_sjc_sp_2010 | tojson | safe }};
-        Plotly.newPlot('grafico_escolaridade_sjc_sp_2010', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 06 -->
+<summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.2: "ENSINO SUPERIOR COMPLETO x GRADUAÇÃO EM TI" (SJC x SP)
+  2010 - 2022</summary>
+<!-- gráfico 08 -->
+<article class="graficos">
+  <div id="grafico_superior_ti_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_superior_ti_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_superior_ti_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 08 -->
 
-    <!-- gráfico 07 -->
-    <article class="graficos">
-      <div id="grafico_escolaridade_sjc_sp_2022"></div>
-      <script>
-        var grafico = {{ grafico_escolaridade_sjc_sp_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_escolaridade_sjc_sp_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 07 -->
+<!-- gráfico 9 -->
+<article class="graficos">
+  <div id="grafico_proporcao_formacao_ti_2010_2022"></div>
+  <script>
+    var grafico = {{ grafico_proporcao_formacao_ti_2010_2022 | tojson | safe }};
+    Plotly.newPlot('grafico_proporcao_formacao_ti_2010_2022', grafico.data, grafico.layout);
+  </script>
+</article>
+<!-- fim gráfico 9 -->
 
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Escolaridade dos jovens (Ensino Médio e Superior)</h1>
-      <div>
-        <h2>Gráfico: Análise de Escolaridade: SJC vs SP (2010 e 2022)</h2>
-        <p>- Houve uma queda na quantidade de indivíduos com Ensino Médio concluído em São José dos Campos;</p>
-        <p>- O número absoluto de jovens com Ensino Superior completo continua expressivamente baixo em relação a São
-          Paulo capital, especialmente nas faixas etárias mais jovens (18–24 anos);</p>
-        <p>- A baixa proporção de jovens de 18–24 anos com ensino superior pode indicar atraso na entrada ou na
-          conclusão do ensino superior;</p>
-        <p>- O grupo de 25 a 29 anos concentra a maior parte dos graduados, sinalizando possível ingresso tardio no
-          ensino superior.</p>
-      </div>
-      <div>
-        <h2>A dimunuição de jovens com ensino concluído em SJC nos útimos 12 anos faz com que a cidade continue muito
-          atrás da grande metrópole. Algumas sugestões:</h2>
-        <p>- Expansão de cursos técnicos e tecnológicos de curta duração;</p>
-        <p>- Programas de apoio à permanência estudantil, especialmente para jovens de 18 a 24 anos, evitando evasão no
-          ensino superior;</p>
-        <p>- Incentivo munícipal às universidades e empresas para programas de estágio e bolsas voltados à prática
-          profissional juvenil.</p>
-      </div>
-    </article>
+<article class="interpretacaoGraficos">
+  <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Formação em TI</h1>
+  <div>
+    <h2>Gráfico: Formação TI x Total: SJC vs SP (2010 e 2022)</h2>
+    <h2>Gráfico: Proporção de Formandos em TI: SJC vs SP (2010 e 2022)</h2>
+    <p>- Em São José dos Campos, a quantidade de indivíduos formados em TI aumentou em 1789 indivíduos (2010 ->
+      2022);</p>
+    <p>- A proporção, no entanto, caiu de 6,27% para 4,25.</p>
+  </div>
+  <div>
+    <h2>Isso indica que, apesar do aumento geral de formados, a participação de TI diminuiu no total de egressos. A
+      redução relativa de formandos pode limitar o desenvolvimento tecnológico regional. Possíveis formas de
+      contornar isso:</h2>
+    <p>- Reforçar incentivo técnico e superior em TI, visto que SJC é um polo tecnológico;</p>
+    <p>- Incentivar programas de bolsas e carreira na área de tecnologia para reverter a proporção de formandos;</p>
+    <p>- Parcerias com o PIT e empresas com base tecnológica para estimular o estudo com a prática no mercado de
+      trabalho.</p>
+  </div>
+</article>
 
-    <summary class="tituloGrafico">ANÁLISE EDUCACIONAL pt.2: "ENSINO SUPERIOR COMPLETO x GRADUAÇÃO EM TI" (SJC x SP)
-      2010 - 2022</summary>
-    <!-- gráfico 08 -->
-    <article class="graficos">
-      <div id="grafico_superior_ti_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_superior_ti_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_superior_ti_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 08 -->
-
-    <!-- gráfico 9 -->
-    <article class="graficos">
-      <div id="grafico_proporcao_formacao_ti_2010_2022"></div>
-      <script>
-        var grafico = {{ grafico_proporcao_formacao_ti_2010_2022 | tojson | safe }};
-        Plotly.newPlot('grafico_proporcao_formacao_ti_2010_2022', grafico.data, grafico.layout);
-      </script>
-    </article>
-    <!-- fim gráfico 9 -->
-
-    <article class="interpretacaoGraficos">
-      <h1>INTERPRETAÇÃO DOS GRÁFICOS E INSIGHTS: Formação em TI</h1>
-      <div>
-        <h2>Gráfico: Formação TI x Total: SJC vs SP (2010 e 2022)</h2>
-        <h2>Gráfico: Proporção de Formandos em TI: SJC vs SP (2010 e 2022)</h2>
-        <p>- Em São José dos Campos, a quantidade de indivíduos formados em TI aumentou em 1789 indivíduos (2010 ->
-          2022);</p>
-        <p>- A proporção, no entanto, caiu de 6,27% para 4,25.</p>
-      </div>
-      <div>
-        <h2>Isso indica que, apesar do aumento geral de formados, a participação de TI diminuiu no total de egressos. A
-          redução relativa de formandos pode limitar o desenvolvimento tecnológico regional. Possíveis formas de
-          contornar isso:</h2>
-        <p>- Reforçar incentivo técnico e superior em TI, visto que SJC é um polo tecnológico;</p>
-        <p>- Incentivar programas de bolsas e carreira na área de tecnologia para reverter a proporção de formandos;</p>
-        <p>- Parcerias com o PIT e empresas com base tecnológica para estimular o estudo com a prática no mercado de
-          trabalho.</p>
-      </div>
-    </article>
-
-    <!-- fim conteúdo principal -->
-
-    <!-- rodapé -->
-    <footer>koitech - 2025</footer>
-    <!-- fim rodapé -->
-  </main>
-</body>
-
-</html>
+<!-- fim conteúdo principal -->
+{% endblock %}
