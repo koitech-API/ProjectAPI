@@ -21,7 +21,7 @@
   <a href ="#equipe"> Equipe</a> |
 </p>
 
-## 💻 Tecnologias <a id="tecnologias"></a>
+## 💻 Tecnologias e Plataformas <a id="tecnologias"></a>
 
 <h4 align="center">
  <a href="#"><img src="https://img.shields.io/badge/HTML-f06529?logo=html5&style=for-the-badge&google&colab&logoColor=white"></a>
@@ -40,15 +40,17 @@
 <br>
 
 ## 📌 Problema <a id="problema"></a>
-A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma quantidade massiva de dados do censo, mas não consegue transformá-los em informações estratégicas e visuais para a gestão municipal.
+A **Secretaria de Planejamento Urbano** de São José dos Campos possui uma grande quantidade de dados do Censo Demográfico, mas enfrenta desafios para transformá-los em informações estratégicas e visuais que auxiliem na gestão municipal.
+
 
 ## 📌 Solução <a id="solucao"></a>
-A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmos uma análise detalhada dos dados do Censo, focando na cidade de São José dos Campos.
+A solução proposta para a **Secretaria de Planejamento Urbano** consiste na realização de uma análise detalhada dos dados do Censo Demográfico, com foco na cidade de São José dos Campos. O estudo concentra-se especialmente na população jovem, compreendida na faixa etária de 15 a 29 anos.
+
 
 ## 🗺️ Roadmap <a id="roadmap"></a>
-|    📍 **Entrega 1**    |     📍 **Entrega 2**    |          📍 **Entrega 3**          |
-| :--------------------: | :---------------------: | :--------------------------------: |
-| 🧱 **Base do projeto** | 📝 **Expanção de indicadores** | ⚡ **Interatividade e refinamento** |
+|    📍 **Entrega 1**     |                📍 **Entrega 2**             |               📍 **Entrega 3**            |
+| :--------------------: | :-----------------------------------------: | :--------------------------------------: |
+| 🧱 **Base do projeto** | 📝 **População Jovem: SJC (SP) x SP (SP)** | ⚡ **Complementação do Quadro Regional** |
 
 ## 📝 PRODUCT BACKLOG <a id="backlog"></a>
 🟩 - Concluído
@@ -65,12 +67,12 @@ A solução proposta para a **Secretaria de Planejamento Urbano** foi realizarmo
 |  07   |   Alta     | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades.                                                                                                |   8 horas    |   02   |   🟩   |
 |  08   |   Média    | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos.                                                                                                    |   6 horas    |   02   |   🟩   |
 |  09   |   Alta     | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local.                                                                        |   4 horas    |   02   |   🟩   |
-|  10   |   Média    | Como gestor de políticas de trabalho e renda, quero visualizar a razão de jovens empregados nas cidades próximas a São José dos Campos para identificar disparidades regionais e orientar políticas de emprego.                                           |   5 horas    |   03   |   ❌   |
-|  11   |   Baixa    | Como analista de planejamento econômico, quero poder visualizar a distribuição salarial nas cidades próximas a São José dos Campos para avaliar o poder aquisitivo e planejar ações de incentivo à renda e qualificação profissional.                     |   5 horas    |   03   |   ❌   |
-|  12   |   Média    | Como coordenador de políticas para juventude, quero poder visualizar a proporção da população jovem nas cidades próximas a São José dos Campos para compreender a representatividade dessa faixa etária e planejar políticas voltadas à juventude.        |   5 horas    |   03   |   ❌   |
-|  13   |   Baixa    | Como planejador municipal, quero poder visualizar a pirâmide etária das cidades próximas a São José dos Campos para entender a estrutura etária local e antecipar demandas sociais relacionadas à juventude.                                              |   5 horas    |   03   |   ❌   |
-|  14   |   Alta     | Como gestor de educação, quero poder comparar o nível de instrução da população jovem (médio e superior) nas cidades próximas a São José dos Campos para identificar desigualdades educacionais e direcionar investimentos em formação.                   |   5 horas    |   03   |   ❌   |
-|  15   |   Alta     | Como gestor de inovação e tecnologia, quero comparar a razão entre superior completo e graduação em TI da população jovem nas cidades próximas a São José dos Campos para avaliar o potencial de mão de obra qualificada e alinhar estratégias regionais. |   5 horas    |   03   |   ❌   |
+|  10   |   Média    | Como gestor de políticas de trabalho e renda, quero visualizar a razão de jovens empregados nas cidades próximas a São José dos Campos para identificar disparidades regionais e orientar políticas de emprego.                                           |   5 horas    |   03   |   🟨   |
+|  11   |   Baixa    | Como analista de planejamento econômico, quero poder visualizar a distribuição salarial nas cidades próximas a São José dos Campos para avaliar o poder aquisitivo e planejar ações de incentivo à renda e qualificação profissional.                     |   5 horas    |   03   |   🟨   |
+|  12   |   Média    | Como coordenador de políticas para juventude, quero poder visualizar a proporção da população jovem nas cidades próximas a São José dos Campos para compreender a representatividade dessa faixa etária e planejar políticas voltadas à juventude.        |   5 horas    |   03   |   🟨   |
+|  13   |   Baixa    | Como planejador municipal, quero poder visualizar a distribuição etária das cidades próximas a São José dos Campos para entender a estrutura etária local e antecipar demandas sociais relacionadas à juventude.                                          |   5 horas    |   03   |   🟨   |
+|  14   |   Alta     | Como gestor de educação, quero poder comparar o nível de instrução da população jovem (médio e superior) nas cidades próximas a São José dos Campos para identificar desigualdades educacionais e direcionar investimentos em formação.                   |   5 horas    |   03   |   🟨   |
+|  15   |   Alta     | Como gestor de inovação e tecnologia, quero comparar a razão entre superior completo e graduação em TI da população jovem nas cidades próximas a São José dos Campos para avaliar o potencial de mão de obra qualificada e alinhar estratégias regionais. |   5 horas    |   03   |   🟨   |
 
 ## 📅 Cronograma de Sprints
 
