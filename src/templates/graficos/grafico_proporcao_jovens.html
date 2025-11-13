@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %} Proporção Jovens - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">PROPORÇÃO DA POPULAÇÃO JOVEM - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_proporcao_jovens_2010"></section>
+    <script>
+        var grafico = {{ grafico_proporcao_jovens_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_proporcao_jovens_2010', grafico.data, grafico.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_proporcao_jovens_2022"></section>
+    <script>
+        var grafico = {{ grafico_proporcao_jovens_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_proporcao_jovens_2022', grafico.data, grafico.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dolore cupiditate consequatur, impedit
+            molestiae, repudiandae autem vitae assumenda temporibus voluptatem, in amet? Iusto nemo vitae sequi ex aut
+            corrupti autem, facilis omnis perspiciatis qui in quas veritatis reprehenderit quae! Dolore cumque corporis
+            totam quod ipsa sed reprehenderit non consequuntur voluptatibus fugit illum quam blanditiis quas deserunt,
+            eligendi ab dolores distinctio. Natus eum veniam, facilis unde necessitatibus tempora distinctio sunt, odio
+            blanditiis repudiandae odit voluptatibus. Unde animi deleniti ex amet illo atque harum magni dolor? Unde,
+            dolorem quis expedita est provident sunt quae. Quo pariatur sunt blanditiis neque quibusdam odit possimus.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto Crítico</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dolore cupiditate consequatur, impedit
+            molestiae, repudiandae autem vitae assumenda temporibus voluptatem, in amet? Iusto nemo vitae sequi ex aut
+            corrupti autem, facilis omnis perspiciatis qui in quas veritatis reprehenderit quae! Dolore cumque corporis
+            totam quod ipsa sed reprehenderit non consequuntur voluptatibus fugit illum quam blanditiis quas deserunt,
+            eligendi ab dolores distinctio. Natus eum veniam, facilis unde necessitatibus tempora distinctio sunt, odio
+            blanditiis repudiandae odit voluptatibus. Unde animi deleniti ex amet illo atque harum magni dolor? Unde,
+            dolorem quis expedita est provident sunt quae. Quo pariatur sunt blanditiis neque quibusdam odit possimus.
+        </p>
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dolore cupiditate consequatur, impedit
+            molestiae, repudiandae autem vitae assumenda temporibus voluptatem, in amet? Iusto nemo vitae sequi ex aut
+            corrupti autem, facilis omnis perspiciatis qui in quas veritatis reprehenderit quae! Dolore cumque corporis
+            totam quod ipsa sed reprehenderit non consequuntur voluptatibus fugit illum quam blanditiis quas deserunt,
+            eligendi ab dolores distinctio. Natus eum veniam, facilis unde necessitatibus tempora distinctio sunt, odio
+            blanditiis repudiandae odit voluptatibus. Unde animi deleniti ex amet illo atque harum magni dolor? Unde,
+            dolorem quis expedita est provident sunt quae. Quo pariatur sunt blanditiis neque quibusdam odit possimus.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dolore cupiditate consequatur, impedit
+            molestiae, repudiandae autem vitae assumenda temporibus voluptatem, in amet? Iusto nemo vitae sequi ex aut
+            corrupti autem, facilis omnis perspiciatis qui in quas veritatis reprehenderit quae! Dolore cumque corporis
+            totam quod ipsa sed reprehenderit non consequuntur voluptatibus fugit illum quam blanditiis quas deserunt,
+            eligendi ab dolores distinctio. Natus eum veniam, facilis unde necessitatibus tempora distinctio sunt, odio
+            blanditiis repudiandae odit voluptatibus. Unde animi deleniti ex amet illo atque harum magni dolor? Unde,
+            dolorem quis expedita est provident sunt quae. Quo pariatur sunt blanditiis neque quibusdam odit possimus.
+        </p>
+    </section>
+    <section>
+        <h1> Propostas de Políticas Públicas (Síntese Executiva)</h1>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dolore cupiditate consequatur, impedit
+            molestiae, repudiandae autem vitae assumenda temporibus voluptatem, in amet? Iusto nemo vitae sequi ex aut
+            corrupti autem, facilis omnis perspiciatis qui in quas veritatis reprehenderit quae! Dolore cumque corporis
+            totam quod ipsa sed reprehenderit non consequuntur voluptatibus fugit illum quam blanditiis quas deserunt,
+            eligendi ab dolores distinctio. Natus eum veniam, facilis unde necessitatibus tempora distinctio sunt, odio
+            blanditiis repudiandae odit voluptatibus. Unde animi deleniti ex amet illo atque harum magni dolor? Unde,
+            dolorem quis expedita est provident sunt quae. Quo pariatur sunt blanditiis neque quibusdam odit possimus.
+        </p>
+    </section>
+</article>
+{% endblock %}
