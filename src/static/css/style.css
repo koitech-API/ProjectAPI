@@ -72,7 +72,7 @@ figure img {
 /* =================== */
 .banner {
     grid-column: 1 / 5;
-    height: 80vh;
+    height: 90vh;
     background: url("../assets/sjc.jpg") no-repeat center center/cover;
     display: grid;
     justify-content: center;
@@ -90,9 +90,40 @@ figure img {
     align-content: center;
 }
 
+/* ========================= */
+/* BOTÕES GAFICOS INDEX.HTML */
+/* ========================= */
+.botoesGraficos {
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botoesGraficos a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    padding: 6px 15px;
+    border: 2px solid #821D18;
+    border-radius: 6px;
+    color: black;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botoesGraficos a:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    transition: 0.5s;
+}
 
 /* =================== */
-/* GRÁFICOS INDEX.HTML */
+/* GRÁFICOS            */
 /* =================== */
 .tituloGrafico {
     background-color: #1A377C;
@@ -101,50 +132,39 @@ figure img {
     text-align: center;
     color: white;
     border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .graficos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: flex-start;
     grid-column: 2/ 4;
     border-radius: 5px;
 }
 
-.graficos div {
+.graficos section {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
-.interpretacaoGraficos {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #f0f0f0da;
-    grid-column: 2/ 4;
-    border-radius: 5px;
-
-}
-
-.interpretacaoGraficos h1 {
+.graficos h1 {
     font-size: 20pt;
 }
 
-.interpretacaoGraficos h2 {
-     font-size: 18pt;
-     margin-bottom: 1rem;
+.graficos p {
+    text-indent: 1rem;
+    margin: 1rem;
+    text-align: justify;
 }
 
-.interpretacaoGraficos h3 {
-     font-size: 16pt;
-}
-
-.interpretacaoGraficos p {
-    margin-left: 1rem;
-}
-
-.interpretacaoGraficos div {
-    margin-bottom: 1rem;
+.graficos ul {
+    list-style: disc;
+    list-style-position: outside;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding-left: 40px;
 }
 
 /* =================== */
@@ -177,15 +197,19 @@ footer {
     .graficos {
         display: flex;
         flex-direction: column;
-        background-color: #d8d8d8;
-        grid-column: 2/ 4;
-        border-radius: 5px;
     }
 
-    .graficos img {
-        max-width: 100%;
-        margin: 0.5rem;
-        border-radius: 5px;
+    .graficos h1 {
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .botoesGraficos {
+       flex-direction: column;
+    } 
+    
+    .botoesGraficos a {
+       font-size: 5vw;
     }
 }
 
