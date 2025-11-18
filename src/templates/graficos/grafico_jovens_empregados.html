@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %} Jovens Empregados - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">Jovens Empregados - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_jovens_empregados_2010"></section>
+    <script>
+        var grafico_empregados_2010 = {{ grafico_jovens_empregados_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_jovens_empregados_2010', grafico_empregados_2010.data, grafico_empregados_2010.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_jovens_empregados_2022"></section>
+    <script>
+        var grafico_empregados_2022 = {{ grafico_jovens_empregados_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_jovens_empregados_2022', grafico_empregados_2022.data, grafico_empregados_2022.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação da evolução:</h1>
+        <p>Entre 2010 e 2022, observa-se queda significativa na proporção de jovens empregados em São José dos Campos
+            quando comparados à população total do município (de 33,37% para 24,47%). Embora os indicadores relativos ao peso dos jovens empregados do município frente ao total
+            de jovens do estado e à população estadual também apresentem redução (de 1,59% para 1,53% e de 0,52% para 0,38%, respectivamente),
+            a maior retração ocorre na dimensão municipal, indicando um enfraquecimento da inserção laboral juvenil local.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto mais crítico da evolução:</h1>
+        <p>O principal aspecto crítico é a redução de quase 9 pontos percentuais na participação dos jovens empregados em relação à população
+            municipal, o que sugere envelhecimento da força de trabalho, possíveis barreiras de entrada para jovens no mercado ou redução de
+            oportunidades de primeiro emprego. Essa tendência pode impactar diretamente a dinâmica econômica e a renovação produtiva
+            do município.
+        </p>
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>Programa Municipal de Primeiro Emprego com incentivos fiscais para empresas que contratem jovens em regime de aprendizagem ou estágio remunerado.</li>
+            <li>Ampliação de cursos técnicos e profissionalizantes alinhados às demandas das cadeias produtivas locais, especialmente tecnologia e indústria avançada.</li>
+            <li>Centro Integrado de Oportunidades Juvenis, centralizando vagas, orientação profissional e consultoria de carreira.</li>
+            <li>Parcerias com o setor produtivo para criação de trilhas de formação dual (teoria + prática).</li>
+            <li>Monitoramento contínuo da inserção juvenil, com painel público atualizado para apoiar decisões estratégicas</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <p>A proporção de jovens empregados em São José dos Campos caiu de 33,37% em 2010 para 24,47% em 2022, revelando retração consistente na
+            participação juvenil no mercado local. Os indicadores comparativos com o estado também mostram queda, embora menos acentuada.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>A redução expressiva na participação de jovens empregados sobre a população municipal — queda de aproximadamente 27% no período — 
+            é o elemento mais relevante para formulação de políticas públicas.
+        </p>
+    </section>
+    <section>
+        <h1> Propostas de políticas públicas (executivas)</h1>
+        <ul>
+            <li>Incentivo à contratação juvenil mediante benefícios fiscais e metas de inclusão.</li>
+            <li>Expansão da formação técnica voltada às vocações econômicas do município.</li>
+            <li>Sistema integrado de orientação e intermediação de emprego para jovens</li>
+            <li>Programas de formação dual com empresas locais</li>
+            <li>Painel municipal de monitoramento da empregabilidade juvenil para suporte a políticas contínuas.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>A dinâmica observada indica necessidade de ação imediata para evitar continuidade da redução da inserção laboral juvenil em São José dos Campos.
+            A implementação de políticas integradas, voltadas à qualificação, facilitação do primeiro emprego e articulação com o setor produtivo,
+            é estratégica para reequilibrar o mercado e assegurar renovação da força de trabalho municipal.
+        </p>
+    </section>
+</article>
+{% endblock %}

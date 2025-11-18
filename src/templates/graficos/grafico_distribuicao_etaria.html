@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %} Distribuição Etária - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">Distribuição Etária - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_distribuicao_etaria_2010"></section>
+    <script>
+        var grafico_etaria_2010 = {{ grafico_distribuicao_etaria_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_distribuicao_etaria_2010', grafico_etaria_2010.data, grafico_etaria_2010.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_distribuicao_etaria_2022"></section>
+    <script>
+        var grafico_etaria_2022 = {{ grafico_distribuicao_etaria_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_distribuicao_etaria_2022', grafico_etaria_2022.data, grafico_etaria_2022.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação da evolução:</h1>
+        <p>Entre 2010 e 2022 observa-se uma redução consistente da população jovem (0–24 anos) em São José dos Campos.
+            Todas as faixas analisadas apresentam queda moderada, acompanhando a tendência nacional de menor fecundidade, envelhecimento populacional e migração
+            menos intensa de famílias jovens para municípios médios. Essa transição demográfica indica uma estrutura etária que gradualmente
+            desloca sua base para grupos adultos e idosos, com efeitos diretos sobre educação, 
+            mercado de trabalho e políticas de primeira infância.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto mais crítico da evolução:</h1>
+        <p>O ponto mais relevante é a redução contínua da faixa de 0 a 4 anos, que recua mais de 9% no período. Esta queda indica menor
+            reposição populacional e aponta para impactos futuros no tamanho da força de trabalho, na demanda escolar e no planejamento urbano.
+            Mantido o ritmo, o município pode enfrentar, já na próxima década, desafios relacionados à redução da população
+            economicamente ativa e ao aumento da razão de dependência.
+        </p>
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>Programa municipal de estímulo à fixação de famílias jovens, com incentivos habitacionais e acesso ampliado a creches.</li>
+            <li>Expansão de políticas de empregabilidade juvenil, com parcerias empresariais e cursos técnicos articulados com setores estratégicos.</li>
+            <li>Revisão da rede educacional, ajustando capacidade e distribuição territorial à demanda decrescente nos primeiros anos escolares.</li>
+            <li>Programa de apoio à parentalidade, com ações de saúde reprodutiva, planejamento familiar e benefícios integrados à primeira infância.</li>
+            <li>Estratégia de atração de profissionais jovens altamente qualificados, conectando oportunidades tecnológicas e universitárias locais.</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <p>A população jovem de São José dos Campos apresenta queda entre 2010 e 2022 em todas as faixas etárias de 0 a 24 anos. As reduções variam de moderadas a significativas, com destaque para a faixa de 0 a 4 anos.
+            A dinâmica sugere um processo já consolidado de envelhecimento demográfico e transição para um município com menor
+            presença relativa de crianças e jovens.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>A redução persistente da população de 0 a 4 anos é o principal fator de atenção, pois impacta diretamente o futuro tamanho da força
+            de trabalho e requer ajustes estratégicos no planejamento das redes de educação e saúde.
+        </p>
+    </section>
+    <section>
+        <h1> Propostas de políticas públicas (executivas)</h1>
+        <ul>
+            <li>P1 — Política Habitacional Jovem: incentivos municipais para aquisição/locação que favoreçam a permanência de famílias jovens.</li>
+            <li>P2 — Programa Municipal de Empregabilidade Juvenil: capacitação técnica setorial alinhada a demandas locais.</li>
+            <li>P3 — Otimização da Rede Escolar: ajuste progressivo da infraestrutura educacional a uma base estudantil menor.</li>
+            <li>P4 — Programa Primeira Infância + Família: ampliação de creches, saúde materno-infantil e apoio à parentalidade.</li>
+            <li>P5 — Estratégia de Atração de Jovens Talentos: conexão entre universidades, polos tecnológicos e oportunidades de inovação.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>Os dados demonstram que São José dos Campos passa por um processo claro de redução da população jovem, coerente com padrões demográficos
+            nacionais, mas que exige atenção imediata para garantir sustentabilidade econômica e equilíbrio etário no médio e longo prazo.
+            As políticas propostas oferecem caminhos para mitigar a queda, fortalecer a fixação de jovens no município e
+            adaptar a rede de serviços públicos à nova estrutura populacional, garantindo planejamento estratégico adequado.
+        </p>
+    </section>
+</article>
+{% endblock %}

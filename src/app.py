@@ -29,5 +29,43 @@ def proporcao():
         grafico_proporcao_jovens_2022 = grafico_proporcao_jovens_2022
     )
 
+@app.route("/empregados")
+def empregados():
+    #caminho até os arquivos dos gráficos
+    grafico_jovens_empregados_2010 = os.path.join("static", "assets", "plots", "grafico_jovens_empregados_2010.json")
+    grafico_jovens_empregados_2022 = os.path.join("static", "assets", "plots", "grafico_jovens_empregados_2022.json")
+
+     #abre e carrega os arquivos dos gráficos
+    with open(grafico_jovens_empregados_2010, "r", encoding="utf-8") as c:
+        grafico_jovens_empregados_2010 = json.load(c)
+
+    with open(grafico_jovens_empregados_2022, "r", encoding="utf-8") as d:
+        grafico_jovens_empregados_2022 = json.load(d)
+
+    return render_template(
+        "./graficos/grafico_jovens_empregados.html",
+        grafico_jovens_empregados_2010 = grafico_jovens_empregados_2010,
+        grafico_jovens_empregados_2022 = grafico_jovens_empregados_2022
+    )
+
+@app.route("/etaria")
+def etaria():
+    #caminho até os arquivos dos gráficos
+    grafico_distribuicao_etaria_2010 = os.path.join("static", "assets", "plots", "grafico_distribuicao_etaria_2010.json")
+    grafico_distribuicao_etaria_2022 = os.path.join("static", "assets", "plots", "grafico_distribuicao_etaria_2022.json")
+
+     #abre e carrega os arquivos dos gráficos
+    with open(grafico_distribuicao_etaria_2010, "r", encoding="utf-8") as e:
+        grafico_distribuicao_etaria_2010 = json.load(e)
+
+    with open(grafico_distribuicao_etaria_2022, "r", encoding="utf-8") as f:
+        grafico_distribuicao_etaria_2022 = json.load(f)
+
+    return render_template(
+        "./graficos/grafico_distribuicao_etaria.html",
+        grafico_distribuicao_etaria_2010 = grafico_distribuicao_etaria_2010,
+        grafico_distribuicao_etaria_2022 = grafico_distribuicao_etaria_2022
+    )
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True, host="0.0.0.0")
