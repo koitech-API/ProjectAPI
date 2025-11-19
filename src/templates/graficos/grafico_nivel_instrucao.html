@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %} Nível de Instrução - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">NÍVEL DE INSTRUÇÃO - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_nivel_instrucao_2010"></section>
+    <script>
+        var grafico_instrucao_2010 = {{ grafico_nivel_instrucao_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_nivel_instrucao_2010', grafico_instrucao_2010.data, grafico_instrucao_2010.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_nivel_instrucao_2022"></section>
+    <script>
+        var grafico_instrucao_2022 = {{ grafico_nivel_instrucao_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_nivel_instrucao_2022', grafico_instrucao_2022.data, grafico_instrucao_2022.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação da evolução:</h1>
+        <p>Os gráficos mostram um avanço expressivo no nível educacional da população jovem de São José dos Campos entre 2010 e 2022. O percentual de 
+            jovens com médio completo ou superior incompleto aumentou significativamente, tornando-se o grupo dominante em 2022. Paralelamente, houve 
+            redução contínua dos grupos de sem instrução e de fundamental completo ou médio incompleto, indicando um movimento consistente de escolarização 
+            e maior permanência no sistema educacional. Além disso, observa-se crescimento moderado, porém relevante, dos jovens com superior completo, refletindo 
+            ampliação do acesso ao ensino superior e maior inserção em trajetórias de qualificação prolongada.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto mais crítico da evolução:</h1>
+        <p>O aspecto mais marcante é o crescimento muito acelerado da proporção de jovens em SJC que alcançaram o ensino médio completo, associado a uma 
+            queda acentuada dos níveis de escolaridade mais baixos. Isso evidencia um avanço social relevante, mas também revela um novo desafio: a pressão 
+            para ampliar vagas, apoio acadêmico e inserção profissional pós-médio**, já que uma base muito maior de jovens está apta (ou buscando) transição para o ensino superior e o mercado de trabalho qualificado.
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>Programa Municipal de Ampliação da Transição Escola–Trabalho, com parcerias empresariais para estágio, formação técnica e contratação de jovens.</li>
+            <li>Expansão de bolsas e apoios municipais ao Ensino Superior, priorizando baixa renda e áreas estratégicas de inovação.</li>
+            <li>Criação de Centros de Orientação Profissional integrados às escolas de ensino médio, oferecendo mentoria, planejamento de carreira e capacitações.</li>
+            <li>Fortalecimento do Ensino Técnico Municipal e Regional, ampliando vagas em cursos alinhados às cadeias produtivas da região (aeroespacial, TI, saúde, logística).</li>
+            <li>Política de Prevenção ao Abandono Escolar, atuando sobre vulnerabilidades sociais, saúde mental e acompanhamento sistemático dos estudantes.</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <p>Entre 2010 e 2022, São José dos Campos apresentou forte avanço educacional entre os jovens. O grupo com médio completo ou superior incompleto
+            tornou-se predominante, superando a marca de 70%. Os níveis de sem instrução e de fundamental/médio incompleto caíram para patamares mínimos.
+            O percentual de jovens com superior completo cresceu, indicando maior continuidade dos estudos. A estrutura educacional da juventude de SJC,
+            portanto, migrou para um padrão mais qualificado e com maior capacidade de inserção profissional.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>O ponto crítico é a necessidade de absorção educacional e produtiva do grande contingente de jovens que agora concluem ou estão concluindo o
+            ensino médio. Esse novo cenário exige políticas de capacitação continuada, ampliação de oportunidades de ensino superior, fortalecimento do
+            ensino técnico e estratégias de empregabilidade juvenil.
+        </p>
+    </section>
+    <section>
+        <h1> Propostas de políticas públicas (executivas)</h1>
+        <ul>
+            <li>Eixo Educação e Formação: Expandir acesso ao ensino superior e técnico; bolsas municipais; parcerias com escolas técnicas e universidades.</li>
+            <li>Eixo Empregabilidade Juvenil: Programas de estágio, primeiro emprego e qualificação profissional em setores estratégicos.</li>
+            <li>Eixo Permanência Escolar: Monitoramento ativo de risco de evasão; apoio psicossocial; programas de recuperação e reforço.</li>
+            <li>Eixo Inovação Social: Hubs de aprendizagem, tecnologia e empreendedorismo para jovens.</li>
+            <li>Eixo Gestão e Monitoramento: Sistema municipal de indicadores educacionais e ocupacionais da juventude, com análise contínua.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>A evolução educacional da juventude de São José dos Campos entre 2010 e 2022 configura um avanço sólido e estruturante. O município apresenta
+            uma base jovem cada vez mais qualificada, criando condições favoráveis para inovação, produtividade e desenvolvimento econômico. Contudo, o 
+            novo perfil educacional exige respostas robustas: políticas de inserção profissional, expansão do ensino superior e fortalecimento da formação
+            técnica. Com planejamento integrado, SJC pode converter esse ganho educacional em capacidade produtiva, competitividade e maior equidade social.
+        </p>
+    </section>
+</article>
+{% endblock %}

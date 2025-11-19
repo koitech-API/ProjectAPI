@@ -67,5 +67,24 @@ def etaria():
         grafico_distribuicao_etaria_2022 = grafico_distribuicao_etaria_2022
     )
 
+@app.route("/instrucao")
+def instrucao():
+    #caminho até os arquivos dos gráficos
+    grafico_nivel_instrucao_2010 = os.path.join("static", "assets", "plots", "grafico_nivel_instrucao_2010.json")
+    grafico_nivel_instrucao_2022 = os.path.join("static", "assets", "plots", "grafico_nivel_instrucao_2022.json")
+
+     #abre e carrega os arquivos dos gráficos
+    with open(grafico_nivel_instrucao_2010, "r", encoding="utf-8") as g:
+        grafico_nivel_instrucao_2010 = json.load(g)
+
+    with open(grafico_nivel_instrucao_2022, "r", encoding="utf-8") as h:
+        grafico_nivel_instrucao_2022 = json.load(h)
+
+    return render_template(
+        "./graficos/grafico_nivel_instrucao.html",
+        grafico_nivel_instrucao_2010 = grafico_nivel_instrucao_2010,
+        grafico_nivel_instrucao_2022 = grafico_nivel_instrucao_2022
+    )
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True, host="0.0.0.0")
