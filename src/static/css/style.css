@@ -114,6 +114,7 @@ figure img {
     font-size: 1.2vw;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
 .botoesGraficos a:hover {

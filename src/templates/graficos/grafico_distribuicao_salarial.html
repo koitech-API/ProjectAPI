@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %} Jovens Empregados - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">Jovens Empregados - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_distribuicao_salarial_2010"></section>
+    <script>
+        var grafico_distribuicao_salarial_2010 = {{ grafico_distribuicao_salarial_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_distribuicao_salarial_2010', grafico_distribuicao_salarial_2010.data, grafico_distribuicao_salarial_2010.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_distribuicao_salarial_2022"></section>
+    <script>
+        var grafico_distribuicao_salarial_2022 = {{ grafico_distribuicao_salarial_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_distribuicao_salarial_2022', grafico_distribuicao_salarial_2022.data, grafico_distribuicao_salarial_2022.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação da evolução:</h1>
+        <p>Em 2010, a maior parte da população ganhava entre 1 e 2 salários mínimos, com um percentual expressivo de
+            34,36%. Em 2022, a distribuição salarial se manteve similar em termos percentuais para os mesmos segmentos,
+            mas com um aumento considerável na fatia de pessoas que ganham até 1 salário mínimo, que passou de 2,37% em
+            2010 para 5,08% em 2022. Esse movimento pode indicar um aumento na desigualdade ou uma alteração nas
+            condições econômicas da cidade. Apesar disso, os percentuais de pessoas ganhando mais de 2 salários mínimos
+            se mantiveram estáveis, sugerindo que a distribuição de renda de maior poder aquisitivo não sofreu grandes
+            oscilações.</p>
+    </section>
+    <section>
+        <h1>Ponto mais crítico da evolução:</h1>
+        <p>O ponto mais crítico da evolução observada é o aumento no percentual de trabalhadores com salários baixos
+            (até 1 salário mínimo), que saltaram de 2,37% para 5,08% de 2010 a 2022. Isso pode ser indicativo de uma
+            precarização do mercado de trabalho ou de uma falta de crescimento no número de empregos qualificados que
+            poderiam permitir que os trabalhadores se qualificassem para faixas salariais mais altas. Este aumento pode
+            sinalizar uma necessidade urgente de políticas públicas focadas na melhoria das condições de emprego e
+            remuneração.</p>
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>Incentivo à qualificação profissional: Desenvolver programas de capacitação e requalificação para a
+                população, com foco nas profissões mais demandadas no mercado local.</li>
+            <li>Valorização salarial: Implementar políticas municipais que incentivem o aumento do salário mínimo
+                local ou que ofereçam benefícios diretos para os trabalhadores com salários baixos.</li>
+            <li>Promoção da economia local: Incentivar a instalação de empresas que gerem mais empregos qualificados,
+                especialmente nas áreas de tecnologia, indústria e serviços, buscando melhorar a qualificação da força
+                de trabalho local.</li>
+            <li>Apoio a pequenos negócios e startups: Criar mecanismos de apoio a empreendedores e pequenas empresas,
+                oferecendo incentivos fiscais e acesso facilitado a crédito.</li>
+            <li>Fomento à educação básica e superior: Ampliar o acesso à educação de qualidade em todos os níveis, com
+                foco na inclusão e melhoria da educação pública, preparando a população para empregos melhores
+                remunerados.</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <p>A distribuição salarial em São José dos Campos apresenta um perfil com predominância de pessoas ganhando
+            entre 1 e 2 salários mínimos, seguido por um número crescente de pessoas ganhando até 1 salário mínimo entre
+            2010 e 2022. A variação entre as faixas salariais reflete uma estabilização nas classes médias e uma leve
+            precarização para as faixas mais baixas.</p>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>O aumento do percentual de trabalhadores com salários abaixo de 1 salário mínimo (de 2,37% em 2010 para 5,08%
+            em 2022) é o fator mais relevante e crítico, pois sugere uma tendência de precarização no mercado de
+            trabalho municipal.</p>
+    </section>
+    <section>
+        <h1> Propostas de Políticas Públicas (executivas)</h1>
+        <ul>
+            <li>Incentivo à qualificação profissional</li>
+            <li>Valorização salarial</li>
+            <li>Promoção da economia local</li>
+            <li>Apoio a pequenos negócios e startups</li>
+            <li>Fomento à educação básica e superior</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>A análise indica um crescimento na desigualdade salarial e uma leve precarização nas condições de trabalho em
+            São José dos Campos. A implementação de políticas públicas focadas em qualificação, valorização salarial e
+            fomento à economia local são essenciais para reverter esse quadro e criar condições para o aumento da renda
+            da população trabalhadora, especialmente nas faixas de menor remuneração.</p>
+    </section>
+</article>
+{% endblock %}

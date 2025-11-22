@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %} Jovens Empregados - Koitech {% endblock %}
+
+{% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<summary class="tituloGrafico">Jovens Empregados - 2010 x 2022</summary>
+<!-- gráfico 01 -->
+<article class="graficos">
+    <section id="grafico_superior_ciencia_computacao_2010"></section>
+    <script>
+        var grafico_superior_ciencia_computacao_2010 = {{ grafico_superior_ciencia_computacao_2010 | tojson | safe }};
+        Plotly.newPlot('grafico_superior_ciencia_computacao_2010', grafico_superior_ciencia_computacao_2010.data, grafico_superior_ciencia_computacao_2010.layout);
+    </script>
+</article>
+<!-- fim gráfico 01 -->
+
+<!-- gráfico 02 -->
+<article class="graficos">
+    <section id="grafico_superior_ciencia_computacao_2022"></section>
+    <script>
+        var grafico_superior_ciencia_computacao_2022 = {{ grafico_superior_ciencia_computacao_2022 | tojson | safe }};
+        Plotly.newPlot('grafico_superior_ciencia_computacao_2022', grafico_superior_ciencia_computacao_2022.data, grafico_superior_ciencia_computacao_2022.layout);
+    </script>
+</article>
+<!-- fim gráfico 02 -->
+
+<summary class="tituloGrafico">PARTE 1 - INTERPRETAÇÃO E RECOMENDAÇÕES</summary>
+<article class="graficos">
+    <section>
+        <h1>Interpretação da evolução:</h1>
+        <p>A evolução observada para São José dos Campos entre 2010 e 2022 mostra um aumento expressivo na proporção de
+            residentes que constam como formandos totais em relação à população do município: de 11,79% em 2010
+            para 20,38% em 2022 (ganho de 8,59 pontos percentuais, ≈+72,97%). Já a proporção específica de
+            formandos em Ciência da Computação em relação à população subiu de 0,29% para 0,35% (ganho de
+            0,06 pp, ≈+20,69%). Em termos práticos isso indica que a base formadora geral do município cresceu de forma
+            relevante — possivelmente por expansão de vagas, maior mobilidade acadêmica ou envelhecimento da população
+            escolar — e que os cursos/egressos em Computação também cresceram, porém em magnitude absoluta muito menor.
+        </p>
+    </section>
+    <section>
+        <h1>Ponto mais crítico da evolução:</h1>
+        <p>O ponto mais crítico dessa evolução é a discrepância entre a expressiva elevação da formação total e a
+            baixa participação absoluta dos formados em Ciência da Computação na população municipal. Mesmo com
+            crescimento percentual relativo (≈20,7%), os formandos em Computação permanecem em patamar muito baixo em
+            termos absolutos (0,35% da população). Isso pode indicar riscos para o ecossistema local de inovação — há
+            mais pessoas formadas, mas poucas em áreas tecnológicas estratégicas, o que pode limitar oferta de mão de
+            obra qualificada para empresas de alta tecnologia e frisar um desalinhamento entre formação e demanda
+            produtiva local.</p>
+    </section>
+    <section>
+        <h1>Propostas de Políticas Públicas</h1>
+        <ul>
+            <li>Programa municipal de estímulo a cursos de TI — bolsas parciais e convênios com universidades para
+                ampliar vagas em Ciência da Computação e áreas correlatas.</li>
+            <li>Parcerias formais com empresas de tecnologia (estágios, trainees, cátedras) para alinhar currículo às
+                competências demandadas e aumentar empregabilidade local.</li>
+            <li>Criação de incentivos à retenção de talentos: subsídios a startups locais, incubadoras e programas de
+                aceleração com vagas preferenciais para egressos de Computação.</li>
+            <li>Programas de difusão e inclusão digital em escolas públicas e técnicas (ensino médio/técnico integrado)
+                para ampliar o fluxo de alunos que optam por cursos de tecnologia.</li>
+            <li>Monitoramento contínuo por indicador municipal: criar painel anual que relacione oferta de cursos,
+                egressos por área e demandas do mercado local (setor/emprego), para ajustar políticas.</li>
+        </ul>
+    </section>
+</article>
+
+<summary class="tituloGrafico">PARTE 2 - RESUMO EXECUTIVO TÉCNICO</summary>
+<article class="graficos">
+    <section>
+        <h1>Síntese dos Resultados</h1>
+        <ul>
+            <li>Indicador “Formandos Total × População” em São José dos Campos cresceu de 11,79% (2010) para
+                20,38% (2022) — aumento absoluto de 8,59 pontos percentuais (≈+72,97% relativo).</li>
+            <li>Indicador “Formandos em Ciência da Computação × População” cresceu de 0,29% (2010) para 0,35%
+                (2022) — aumento absoluto de 0,06 pp (≈+20,69% relativo).</li>
+            <li>Interpretação: crescimento robusto da formação geral; crescimento relativamente modesto (em valor
+                absoluto) de formados em Computação.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Ponto Crítico Identificado</h1>
+        <p>A baixa representatividade absoluta dos formados em Ciência da Computação frente à população (mesmo após
+            crescimento relativo) aponta para um possível descompasso entre a formação produzida localmente e as
+            necessidades de um ecossistema tecnológico. Sem ações corretivas, o município pode enfrentar falta de
+            profissionais para sustentar expansão de empresas de tecnologia ou perda de valor agregado em sua economia.
+        </p>
+    </section>
+    <section>
+        <h1> Propostas de Políticas Públicas (executivas)</h1>
+        <ul>
+            <li>Programa de Expansão de Vagas em TI — subsídios e convênios com IES para aumentar vagas em Ciência da
+                Computação e cursos afins.</li>
+            <li>Parcerias Empresa–Universidade — acordos formais para estágios remunerados, projetos aplicados e
+                atualização curricular orientada por demandas locais.</li>
+            <li>Incentivo à Retenção de Talentos — apoio a incubadoras, programas de crédito e incentivos fiscais para
+                startups que contratem egressos locais.</li>
+            <li>Formação Inicial e Técnica — integrar programação e lógica no ensino médio/técnico público para
+                ampliar pipeline de futuros estudantes de Computação.</li>
+            <li>Monitoramento e Governaça de Indicadores — painel anual com série histórica por área de formação e
+                cruzamento com mercado de trabalho para ajustar políticas.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Conclusão</h1>
+        <p>Os dados apontam que São José dos Campos obteve um ganho considerável na formação acadêmica geral entre 2010
+            e 2022. No entanto, a participação de formados em Ciência da Computação na população continua baixa em
+            termos absolutos, o que pode comprometer a capacidade do município de suprir oferta qualificada de mão de
+            obra para setores de tecnologia e inovação. Recomenda-se adotar um conjunto articulado de políticas: (i)
+            ampliar oferta e qualidade da formação em TI; (ii) fortalecer laços com o setor produtivo; (iii) promover
+            retenção de talentos locais; e (iv) instituir monitoramento regular de indicadores. Essas ações, coordenadas
+            pela Secretaria de Desenvolvimento Econômico e pela Secretaria de Educação, permitirão transformar o
+            crescimento formativo em vantagem competitiva sustentável.</p>
+    </section>
+</article>
+{% endblock %}
