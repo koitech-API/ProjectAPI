@@ -86,5 +86,45 @@ def instrucao():
         grafico_nivel_instrucao_2022 = grafico_nivel_instrucao_2022
     )
 
+@app.route("/superior")
+def superior():
+    #caminho até os arquivos dos gráficos
+    grafico_superior_ciencia_computacao_2010 = os.path.join("static", "assets", "plots", "grafico_superior_ciencia_computacao_2010.json")
+    grafico_superior_ciencia_computacao_2022 = os.path.join("static", "assets", "plots", "grafico_superior_ciencia_computacao_2022.json")
+
+     #abre e carrega os arquivos dos gráficos
+    with open(grafico_superior_ciencia_computacao_2010, "r", encoding="utf-8") as g:
+        grafico_superior_ciencia_computacao_2010 = json.load(g)
+
+    with open(grafico_superior_ciencia_computacao_2022, "r", encoding="utf-8") as h:
+        grafico_superior_ciencia_computacao_2022 = json.load(h)
+
+    return render_template(
+        "./graficos/grafico_superior_ciencia_computacao.html",
+        grafico_superior_ciencia_computacao_2010 = grafico_superior_ciencia_computacao_2010,
+        grafico_superior_ciencia_computacao_2022 = grafico_superior_ciencia_computacao_2022
+    )
+
+@app.route("/salarial")
+def salarial():
+    #caminho até os arquivos dos gráficos
+    grafico_distribuicao_salarial_2010 = os.path.join("static", "assets", "plots", "grafico_distribuicao_salarial_2010.json")
+    grafico_distribuicao_salarial_2022 = os.path.join("static", "assets", "plots", "grafico_distribuicao_salarial_2022.json")
+
+     #abre e carrega os arquivos dos gráficos
+    with open(grafico_distribuicao_salarial_2010, "r", encoding="utf-8") as g:
+        grafico_distribuicao_salarial_2010 = json.load(g)
+
+    with open(grafico_distribuicao_salarial_2022, "r", encoding="utf-8") as h:
+        grafico_distribuicao_salarial_2022 = json.load(h)
+
+    return render_template(
+        "./graficos/grafico_distribuicao_salarial.html",
+        grafico_distribuicao_salarial_2010 = grafico_distribuicao_salarial_2010,
+        grafico_distribuicao_salarial_2022 = grafico_distribuicao_salarial_2022
+    )
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True, host="0.0.0.0")
