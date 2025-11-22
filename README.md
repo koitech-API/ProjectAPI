@@ -67,12 +67,12 @@ A solução proposta para a **Secretaria de Planejamento Urbano** consiste na re
 |  07   |   Alta     | Como analista socioeconômico, quero calcular níveis de escolaridade e renda média dos jovens, para avaliar oportunidades e desigualdades entre as cidades.                                                                                                |   8 horas    |   02   |   🟩   |
 |  08   |   Média    | Como pesquisador, quero correlacionar escolaridade e renda dos jovens, para entender se o aumento da educação está refletindo em melhores rendimentos.                                                                                                    |   6 horas    |   02   |   🟩   |
 |  09   |   Alta     | Como planejador urbano, quero extrair insights sobre retenção e atração de jovens em São José dos Campos, para orientar políticas públicas e estratégias de desenvolvimento local.                                                                        |   4 horas    |   02   |   🟩   |
-|  10   |   Média    | Como gestor de políticas de trabalho e renda, quero visualizar a razão de jovens empregados nas cidades próximas a São José dos Campos para identificar disparidades regionais e orientar políticas de emprego.                                           |   5 horas    |   03   |   🟨   |
-|  11   |   Baixa    | Como analista de planejamento econômico, quero poder visualizar a distribuição salarial nas cidades próximas a São José dos Campos para avaliar o poder aquisitivo e planejar ações de incentivo à renda e qualificação profissional.                     |   5 horas    |   03   |   🟨   |
-|  12   |   Média    | Como coordenador de políticas para juventude, quero poder visualizar a proporção da população jovem nas cidades próximas a São José dos Campos para compreender a representatividade dessa faixa etária e planejar políticas voltadas à juventude.        |   5 horas    |   03   |   🟨   |
-|  13   |   Baixa    | Como planejador municipal, quero poder visualizar a distribuição etária das cidades próximas a São José dos Campos para entender a estrutura etária local e antecipar demandas sociais relacionadas à juventude.                                          |   5 horas    |   03   |   🟨   |
-|  14   |   Alta     | Como gestor de educação, quero poder comparar o nível de instrução da população jovem (médio e superior) nas cidades próximas a São José dos Campos para identificar desigualdades educacionais e direcionar investimentos em formação.                   |   5 horas    |   03   |   🟨   |
-|  15   |   Alta     | Como gestor de inovação e tecnologia, quero comparar a razão entre superior completo e graduação em TI da população jovem nas cidades próximas a São José dos Campos para avaliar o potencial de mão de obra qualificada e alinhar estratégias regionais. |   5 horas    |   03   |   🟨   |
+|  10   |   Média    | Como gestor de políticas de trabalho e renda, quero visualizar a razão de jovens empregados nas cidades próximas a São José dos Campos para identificar disparidades regionais e orientar políticas de emprego.                                           |   5 horas    |   03   |   🟩   |
+|  11   |   Baixa    | Como analista de planejamento econômico, quero poder visualizar a distribuição salarial nas cidades próximas a São José dos Campos para avaliar o poder aquisitivo e planejar ações de incentivo à renda e qualificação profissional.                     |   5 horas    |   03   |   🟩   |
+|  12   |   Média    | Como coordenador de políticas para juventude, quero poder visualizar a proporção da população jovem nas cidades próximas a São José dos Campos para compreender a representatividade dessa faixa etária e planejar políticas voltadas à juventude.        |   5 horas    |   03   |   🟩   |
+|  13   |   Baixa    | Como planejador municipal, quero poder visualizar a distribuição etária das cidades próximas a São José dos Campos para entender a estrutura etária local e antecipar demandas sociais relacionadas à juventude.                                          |   5 horas    |   03   |   🟩   |
+|  14   |   Alta     | Como gestor de educação, quero poder comparar o nível de instrução da população jovem (médio e superior) nas cidades próximas a São José dos Campos para identificar desigualdades educacionais e direcionar investimentos em formação.                   |   5 horas    |   03   |   🟩   |
+|  15   |   Alta     | Como gestor de inovação e tecnologia, quero comparar a razão entre superior completo e graduação em TI da população jovem nas cidades próximas a São José dos Campos para avaliar o potencial de mão de obra qualificada e alinhar estratégias regionais. |   5 horas    |   03   |   🟩   |
 
 ## 📅 Cronograma de Sprints
 
@@ -108,21 +108,20 @@ Documentos
 │       ├── notify.yaml
 │       └── sync_readme.yaml
 ├── dados
-│   └── populacao_jovem
-│       ├── _populacao_jovem_2010_2022.ipynb
-│       ├── ocupadas_etário_2010.xlsx
-│       ├── ocupadas_etário_2022.xlsx
-│       ├── ocupadas_salarial_2010.xlsx
-│       ├── ocupadas_salarial_2022.xlsx
-│       ├── populacao_nivel_instrucao_2010.xlsx
-│       ├── populacao_nivel_instrucao_2022.xlsx
-│       ├── populacao_residente_idade_2010.xlsx
-│       ├── populacao_residente_idade_2022.xlsx
-│       ├── populacao_residente_total_2010.csv
-│       ├── populacao_residente_total_2022.xlsx
-│       ├── populacao_residente_total_SP_2010.xlsx
-│       ├── populacao_superior_completo_2010.xlsx
-│       └── populacao_superior_completo_2022.xlsx
+│   └── censo_2010_2022
+│       ├── censo_2010_2022.ipynb
+│       ├── distribuicao_salarial_2010.xlsx
+│       ├── distribuicao_salarial_2022.xlsx
+│       ├── jovens_empregados_2010.xlsx
+│       ├── jovens_empregados_2022.xlsx
+│       ├── nivel_instrucao_2010.xlsx
+│       ├── nivel_instrucao_2022.xlsx
+│       ├── populacao_idade_2010.xlsx
+│       ├── populacao_idade_2022.xlsx
+│       ├── populacao_residente_2010.xlsx
+│       ├── populacao_residente_2022.xlsx
+│       ├── superior_ciencia_computacao_2010.xlsx
+│       └── superior_ciencia_computacao_2022.xlsx
 ├── scrum
 │   └── sprints
 │       ├── sprint 1
@@ -145,23 +144,36 @@ ProjectAPI
 │   ├── static
 │   │   ├── assets
 │   │   │   ├── plots
-│   │   │   │   ├── grafico_distribuicao_salarial_sjc_sp_2010_2022.json
-│   │   │   │   ├── grafico_escolaridade_sjc_sp_2010.json
-│   │   │   │   ├── grafico_escolaridade_sjc_sp_2022.json
-│   │   │   │   ├── grafico_piramide_etaria_sjc_sp_2010_2022.json
-│   │   │   │   ├── grafico_populacao_jovem_residente_sjc_sp_2010_2022.json
-│   │   │   │   ├── grafico_proporcao_formacao_ti_2010_2022.json
-│   │   │   │   ├── grafico_razao_jovens_ocupados_sjc_sp_2010_2022.json
-│   │   │   │   ├── grafico_razao_jovens_residentes_sjc_sp_2010_2022.json
-│   │   │   │   └── grafico_superior_ti_2010_2022.json
+│   │   │   │   ├── grafico_distribuicao_etaria_2010.json
+│   │   │   │   ├── grafico_distribuicao_etaria_2022.json
+│   │   │   │   ├── grafico_distribuicao_salarial_2010.json
+│   │   │   │   ├── grafico_distribuicao_salarial_2022.json
+│   │   │   │   ├── grafico_jovens_empregados_2010.json
+│   │   │   │   ├── grafico_jovens_empregados_2022.json
+│   │   │   │   ├── grafico_nivel_instrucao_2010.json
+│   │   │   │   ├── grafico_nivel_instrucao_2022.json
+│   │   │   │   ├── grafico_proporcao_jovens_2010.json
+│   │   │   │   ├── grafico_proporcao_jovens_2022.json
+│   │   │   │   ├── grafico_superior_ciencia_computacao_2010.json
+│   │   │   │   └── grafico_superior_ciencia_computacao_2022.json
 │   │   │   ├── logo.png
 │   │   │   └── sjc.jpg
 │   │   └── css
 │   │       ├── reset.css
 │   │       └── style.css
 │   ├── templates
-│   │   ├── index.html
-│   │   └── sobre.html
+│   │   ├── components
+│   │   │   ├── _footer.html
+│   │   │   └── _header.html
+│   │   ├── graficos
+│   │   │   ├── grafico_distribuicao_etaria.html
+│   │   │   ├── grafico_distribuicao_salarial.html
+│   │   │   ├── grafico_jovens_empregados.html
+│   │   │   ├── grafico_nivel_instrucao.html
+│   │   │   ├── grafico_proporcao_jovens.html
+│   │   │   └── grafico_superior_ciencia_computacao.html
+│   │   ├── base.html
+│   │   └── index.html
 │   ├── app.py
 │   └── requirements.txt
 ├── .gitignore
@@ -219,8 +231,8 @@ ProjectAPI
   ```bash
    git clone https://github.com/koitech-API/Documentos.git
   ```
- 2. Fazer o upload da pasta "populacao_jovem" (Documentos/dados/populacao_jovem) em um Google Drive de sua escolha
- 3. Seguir o passo-a-passo no início do arquivo "_populacao_jovem_2010_2022.ipynb"
+ 1. Fazer o upload da pasta "censo_2010_2022" (Documentos/dados/censo_2010_2022) em um Google Drive de sua escolha
+ 2. Seguir o passo-a-passo no início do arquivo "censo_2010_2022.ipynb"
 
 ## 👥 EQUIPE <a id="equipe"></a>
 
