@@ -78,9 +78,9 @@ A solução proposta para a **Secretaria de Planejamento Urbano** consiste na re
 
 | Sprint         |    Período    | Documentação                                          |
 | -------------- | :-----------: | ----------------------------------------------------- |
-| 🔖 **SPRINT 1** | 08/09 - 28/09 | [Sprint 1 Docs](/scrum/sprints/sprint%201/README.md)  |
-| 🔖 **SPRINT 2** | 06/10 - 26/10 | [Sprint 2 Docs](/scrum/sprints/sprint%202/README.md)  |
-| 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](/scrum/sprints/sprint%203/README.md) |
+| 🔖 **SPRINT 1** | 08/09 - 28/09 | [Sprint 1 Docs](https://github.com/koitech-API/Documentos/tree/main/scrum/sprints/sprint%201)  |
+| 🔖 **SPRINT 2** | 06/10 - 26/10 | [Sprint 2 Docs](https://github.com/koitech-API/Documentos/tree/main/scrum/sprints/sprint%202)  |
+| 🔖 **SPRINT 3** | 03/11 - 23/11 | [Sprint 3 Docs](https://github.com/koitech-API/Documentos/tree/main/scrum/sprints/sprint%203)  |
 
 ## ✔️ DoR - Definition of Ready
   - Backlog priorizado de acordo com valor de negócio
